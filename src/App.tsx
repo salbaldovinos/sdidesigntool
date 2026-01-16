@@ -5,12 +5,13 @@ import { WelcomeView } from '@/components/views/WelcomeView'
 import { ProjectsView } from '@/components/views/ProjectsView'
 import { SettingsView } from '@/components/views/SettingsView'
 import { HelpView } from '@/components/views/HelpView'
+import { CatalogView } from '@/components/views/CatalogView'
 import { useDesignStore } from '@/stores/designStore'
 import { useAutoSave } from '@/hooks/useAutoSave'
 import { Button } from '@/components/ui/button'
 import { Save, Check, AlertCircle } from 'lucide-react'
 
-type ViewType = 'welcome' | 'designer' | 'projects' | 'settings' | 'help'
+type ViewType = 'welcome' | 'designer' | 'projects' | 'catalog' | 'settings' | 'help'
 
 const viewConfig: Record<ViewType, { title: string; subtitle: string }> = {
   welcome: {
@@ -24,6 +25,10 @@ const viewConfig: Record<ViewType, { title: string; subtitle: string }> = {
   projects: {
     title: 'Projects',
     subtitle: 'Manage your saved designs',
+  },
+  catalog: {
+    title: 'Product Catalog',
+    subtitle: 'Browse Geoflow products and specifications',
   },
   settings: {
     title: 'Settings',
@@ -82,6 +87,8 @@ function App() {
         return <WizardContainer />
       case 'projects':
         return <ProjectsView onOpenProject={() => setCurrentView('designer')} />
+      case 'catalog':
+        return <CatalogView />
       case 'settings':
         return <SettingsView />
       case 'help':

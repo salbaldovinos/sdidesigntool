@@ -3,7 +3,7 @@ import { Sidebar } from './Sidebar'
 import { Header } from './Header'
 import { X } from 'lucide-react'
 
-type ViewType = 'welcome' | 'designer' | 'projects' | 'settings' | 'help'
+type ViewType = 'welcome' | 'designer' | 'projects' | 'catalog' | 'settings' | 'help'
 
 interface DashboardLayoutProps {
   children: React.ReactNode

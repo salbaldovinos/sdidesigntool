@@ -4,6 +4,7 @@ import {
   Settings,
   HelpCircle,
   Droplets,
+  Package,
 } from 'lucide-react'
 
 interface NavItem {
@@ -15,7 +16,7 @@ interface NavItem {
   badge?: string
 }
 
-type ViewType = 'welcome' | 'designer' | 'projects' | 'settings' | 'help'
+type ViewType = 'welcome' | 'designer' | 'projects' | 'catalog' | 'settings' | 'help'
 
 interface SidebarProps {
   currentView: ViewType
@@ -55,6 +56,16 @@ export function Sidebar({ currentView, onViewChange, onClose }: SidebarProps) {
         onClose?.()
       },
       active: currentView === 'projects',
+    },
+    {
+      id: 'catalog',
+      label: 'Products',
+      icon: <Package className="h-5 w-5" />,
+      onClick: () => {
+        onViewChange('catalog')
+        onClose?.()
+      },
+      active: currentView === 'catalog',
     },
   ]
 
