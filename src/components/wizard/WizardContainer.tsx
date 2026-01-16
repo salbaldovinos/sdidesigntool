@@ -27,7 +27,7 @@ import {
 } from '@/data'
 
 export function WizardContainer() {
-  const { currentStep, nextStep, prevStep, designInputs, pipeSegments, selectedProducts } = useDesignStore()
+  const { currentStep, setCurrentStep, nextStep, prevStep, designInputs, pipeSegments, selectedProducts } = useDesignStore()
   const { feedback } = useAssistantFeedback(currentStep)
   const [isGenerating, setIsGenerating] = React.useState(false)
 
@@ -289,64 +289,166 @@ export function WizardContainer() {
     }
   }
 
+  // Step titles for sidebar
+  const stepTitles = [
+    { number: 1, title: 'Design Inputs', icon: '1' },
+    { number: 2, title: 'System Layout', icon: '2' },
+    { number: 3, title: 'Zone TDH', icon: '3' },
+    { number: 4, title: 'Results', icon: '4' },
+    { number: 5, title: 'Configuration', icon: '5' },
+  ]
+
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      {/* Step Content */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-4 sm:p-6">
-        {renderStep()}
-      </div>
-
-      {/* Design Assistant Panel */}
-      <AssistantPanel
-        feedback={feedback}
-        title="Design Assistant"
-        defaultExpanded={feedback.some((f) => f.severity === 'error' || f.severity === 'warning')}
-      />
-
-      {/* Navigation - Fixed on mobile, inline on desktop */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 lg:relative lg:bg-transparent lg:border-0 lg:p-0 z-30">
-        <div className="flex gap-3 lg:justify-between max-w-4xl mx-auto">
-          <Button
-            variant="outline"
-            onClick={prevStep}
-            disabled={currentStep === 1}
-            className="flex-1 lg:flex-none"
-          >
-            <ChevronLeft className="w-4 h-4 mr-1 sm:mr-2" />
-            <span className="hidden sm:inline">Previous</span>
-            <span className="sm:hidden">Back</span>
-          </Button>
-
-          {currentStep < 5 ? (
-            <Button onClick={nextStep} className="flex-1 lg:flex-none">
-              <span>Next</span>
-              <ChevronRight className="w-4 h-4 ml-1 sm:ml-2" />
-            </Button>
-          ) : (
-            <Button
-              onClick={handleGenerateReport}
-              disabled={isGenerating}
-              className="flex-1 lg:flex-none"
-            >
-              {isGenerating ? (
-                <>
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                  <span>Generating...</span>
-                </>
-              ) : (
-                <>
-                  <FileText className="w-4 h-4 mr-2" />
-                  <span className="hidden sm:inline">Generate Report</span>
-                  <span className="sm:hidden">Report</span>
-                </>
-              )}
-            </Button>
-          )}
+    <div className="max-w-7xl mx-auto">
+      {/* Mobile Step Indicator */}
+      <div className="lg:hidden px-4 py-3 mb-4">
+        <div className="flex items-center gap-2">
+          <span className="px-3 py-1 bg-teal-600 text-white text-sm font-medium rounded-full">
+            Step {currentStep}
+          </span>
+          <span className="text-sm text-gray-500 dark:text-gray-400">
+            {stepTitles[currentStep - 1]?.title}
+          </span>
         </div>
       </div>
 
-      {/* Spacer for fixed bottom nav on mobile */}
-      <div className="h-20 lg:hidden" />
+      {/* Main Layout - Three columns on desktop */}
+      <div className="lg:flex lg:gap-6">
+        {/* Left Sidebar - Steps & Actions (Desktop only) */}
+        <div className="hidden lg:block lg:w-56 flex-shrink-0">
+          <div className="sticky top-4 space-y-4">
+            {/* Step Navigation */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-4">
+              <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+                Steps
+              </h3>
+              <nav className="space-y-1">
+                {stepTitles.map((step) => (
+                  <button
+                    key={step.number}
+                    onClick={() => setCurrentStep(step.number as 1 | 2 | 3 | 4 | 5)}
+                    className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                      step.number === currentStep
+                        ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 font-medium'
+                        : step.number < currentStep
+                        ? 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                        : 'text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                    }`}
+                  >
+                    <span
+                      className={`w-6 h-6 flex items-center justify-center rounded-full text-xs font-medium ${
+                        step.number === currentStep
+                          ? 'bg-teal-600 text-white'
+                          : step.number < currentStep
+                          ? 'bg-teal-100 dark:bg-teal-800 text-teal-700 dark:text-teal-300'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400'
+                      }`}
+                    >
+                      {step.number}
+                    </span>
+                    <span className="truncate">{step.title}</span>
+                  </button>
+                ))}
+              </nav>
+            </div>
+
+            {/* Generate Report Button */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-4">
+              <Button
+                onClick={handleGenerateReport}
+                disabled={isGenerating}
+                className="w-full"
+                variant={currentStep === 5 ? 'default' : 'outline'}
+              >
+                {isGenerating ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    <span>Generating...</span>
+                  </>
+                ) : (
+                  <>
+                    <FileText className="w-4 h-4 mr-2" />
+                    <span>Generate Report</span>
+                  </>
+                )}
+              </Button>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
+                Download PDF with design calculations and BOM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Center - Main Content */}
+        <div className="flex-1 min-w-0 px-4 lg:px-0">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-4 sm:p-6">
+            {renderStep()}
+          </div>
+
+          {/* Mobile Design Assistant (below content) */}
+          <div className="lg:hidden mt-4">
+            <AssistantPanel
+              feedback={feedback}
+              title="Design Assistant"
+              defaultExpanded={feedback.some((f) => f.severity === 'error' || f.severity === 'warning')}
+            />
+          </div>
+
+          {/* Mobile Navigation - Fixed at bottom */}
+          <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 p-4 z-30">
+            <div className="flex gap-3">
+              <Button
+                variant="outline"
+                onClick={prevStep}
+                disabled={currentStep === 1}
+                className="flex-1"
+              >
+                <ChevronLeft className="w-4 h-4 mr-1" />
+                <span>Back</span>
+              </Button>
+
+              {currentStep < 5 ? (
+                <Button onClick={nextStep} className="flex-1">
+                  <span>Next</span>
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Button>
+              ) : (
+                <Button
+                  onClick={handleGenerateReport}
+                  disabled={isGenerating}
+                  className="flex-1"
+                >
+                  {isGenerating ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      <span>Generating...</span>
+                    </>
+                  ) : (
+                    <>
+                      <FileText className="w-4 h-4 mr-2" />
+                      <span>Report</span>
+                    </>
+                  )}
+                </Button>
+              )}
+            </div>
+          </div>
+
+          {/* Spacer for fixed bottom nav on mobile */}
+          <div className="h-24 lg:hidden" />
+        </div>
+
+        {/* Right Sidebar - Design Assistant (Desktop only, sticky) */}
+        <div className="hidden lg:block lg:w-80 flex-shrink-0">
+          <div className="sticky top-4">
+            <AssistantPanel
+              feedback={feedback}
+              title="Design Assistant"
+              defaultExpanded={true}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
