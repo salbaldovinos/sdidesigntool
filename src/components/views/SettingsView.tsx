@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { User, Bell, Palette, Database, Sun, Moon, Monitor } from 'lucide-react'
+import { User, Palette, Database, Sun, Moon, Monitor } from 'lucide-react'
 import { useTheme } from '@/hooks/useTheme'
 
 export function SettingsView() {
@@ -38,21 +38,6 @@ export function SettingsView() {
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Account management will be available in a future update.
-          </p>
-        </CardContent>
-      </Card>
-
-      {/* Notifications Section */}
-      <Card className="dark:bg-gray-800 dark:border-gray-700">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-base dark:text-gray-100">
-            <Bell className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-            Notifications
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Notification preferences will be available when user accounts are enabled.
           </p>
         </CardContent>
       </Card>
