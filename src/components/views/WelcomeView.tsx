@@ -72,20 +72,20 @@ export function WelcomeView({ onGetStarted }: WelcomeViewProps) {
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {steps.map((step) => (
-            <Card key={step.number} className="relative overflow-hidden">
-              <CardContent className="p-4">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
+            <Card key={step.number} className="relative overflow-hidden h-full">
+              <CardContent className="p-5 h-full">
+                <div className="flex items-center gap-4 h-full">
+                  <div className="flex-shrink-0 self-center">
+                    <div className="w-12 h-12 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-lg">
                       {step.number}
                     </div>
                   </div>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
                       <span className="text-teal-600">{step.icon}</span>
                       <h3 className="font-semibold text-gray-900">{step.title}</h3>
                     </div>
-                    <p className="text-sm text-gray-500">{step.description}</p>
+                    <p className="text-sm text-gray-500 leading-snug">{step.description}</p>
                   </div>
                 </div>
               </CardContent>
@@ -96,23 +96,23 @@ export function WelcomeView({ onGetStarted }: WelcomeViewProps) {
 
       {/* Features */}
       <Card className="bg-gradient-to-br from-teal-50 to-white border-teal-100">
-        <CardContent className="p-6">
-          <div className="grid gap-6 sm:grid-cols-3 text-center">
-            <div>
+        <CardContent className="p-6 sm:p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 sm:divide-x sm:divide-teal-200">
+            <div className="text-center px-4">
               <div className="text-2xl font-bold text-teal-700">Accurate</div>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="text-sm text-gray-600 mt-2">
                 Hazen-Williams calculations validated against industry standards
               </p>
             </div>
-            <div>
+            <div className="text-center px-4">
               <div className="text-2xl font-bold text-teal-700">Offline</div>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="text-sm text-gray-600 mt-2">
                 Works without internet - perfect for field use
               </p>
             </div>
-            <div>
+            <div className="text-center px-4">
               <div className="text-2xl font-bold text-teal-700">Professional</div>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="text-sm text-gray-600 mt-2">
                 Generate PDF reports ready for clients and contractors
               </p>
             </div>
