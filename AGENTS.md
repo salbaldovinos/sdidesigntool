@@ -6,7 +6,7 @@ This file tracks the current state of development, lessons learned, and next ste
 
 ## Current Status: Phase 6 (Testing & Deployment)
 
-**Last Updated:** 2025-01-15 (Dashboard Layout Added)
+**Last Updated:** 2026-01-15 (Welcome View, Dark Mode, Search)
 
 ### Completed Phases
 
@@ -67,20 +67,37 @@ This file tracks the current state of development, lessons learned, and next ste
 - [x] Geoflow teal color palette (#008080) applied throughout
 - [x] Mobile-first responsive design with DM Sans typography
 - [x] Dashboard layout with collapsible sidebar navigation
-- [x] Header with search, notifications, user avatar placeholders
+- [x] Header with search and user avatar
 - [x] Sidebar with logo, nav items, and wizard step progress
 - [x] Projects view for project management
-- [x] Settings and Help placeholder views
+- [x] Settings view with theme toggle
+- [x] Help view with Geoflow website links
 - [x] System Layout reference diagram (SVG schematic)
 - [x] 44px touch targets for mobile accessibility
 
-#### ⏳ Phase 6: Testing & Deployment (Partially Complete)
+#### ✅ Phase 5.6: Welcome View & Search
+- [x] Welcome view as default landing page
+- [x] "Get Started" button creates new project
+- [x] Real-time project search with debounce (200ms)
+- [x] Recent projects dropdown when search focused
+- [x] Keyboard navigation for search results
+- [x] Match highlighting in search results
+
+#### ✅ Phase 5.7: Dark Mode
+- [x] Theme toggle (Light/Dark/System) in Settings
+- [x] useTheme hook with localStorage persistence
+- [x] Tailwind v4 dark mode via @custom-variant
+- [x] Inline script for flash-free theme loading
+- [x] Dark mode support for all layout components
+
+#### ✅ Phase 6: Testing & Deployment
 - [x] Excel validation script (`scripts/validate-calculations.js`)
 - [x] Unit tests for hydraulic calculations (34 tests in `hydraulics.test.ts`)
 - [x] ESLint configuration (`eslint.config.js`)
 - [x] Vitest test framework setup
-- [ ] Integration tests for wizard flow
-- [ ] Vercel deployment
+- [x] Vercel deployment (https://sdidesigntool.vercel.app)
+- [x] GitHub repository connected
+- [ ] Integration tests for wizard flow (deferred)
 
 ---
 
@@ -122,27 +139,27 @@ This file tracks the current state of development, lessons learned, and next ste
 
 ## Next Steps (Priority Order)
 
-### Immediate
-1. **Vercel deployment**
-   - Connect GitHub repository
-   - Deploy and verify PWA installation
-
-2. **Unit tests** (optional for MVP)
-   - Test calculation modules against Excel reference values
-   - Integration tests for wizard flow
-
 ### Future Enhancements (Post-MVP)
-1. **Add pump curve visualization**
+1. **User Authentication**
+   - Supabase integration for user accounts
+   - Cloud sync for projects across devices
+   - Share projects between users
+
+2. **Add pump curve visualization**
    - Install Visx/Recharts
    - Display pump operating point
    - Show system curve vs pump curve (requires pump catalog)
 
-2. **Advanced irrigation calculations**
+3. **Advanced irrigation calculations**
    - Emission uniformity (EU%) calculation
    - Lateral design calculations
 
-3. **Unit conversions**
+4. **Unit conversions**
    - Support for metric units (LPM, kPa, meters)
+
+5. **Integration tests**
+   - End-to-end wizard flow testing
+   - Project save/load testing
 
 ---
 
@@ -170,8 +187,11 @@ This file tracks the current state of development, lessons learned, and next ste
 | `src/lib/db.ts` | Dexie IndexedDB setup | ✅ Complete |
 | `src/hooks/useAutoSave.ts` | Auto-save hook | ✅ Complete |
 | `src/hooks/useOnlineStatus.ts` | Online/offline detection | ✅ Complete |
+| `src/hooks/useDebounce.ts` | Debounce hook for search | ✅ Complete |
+| `src/hooks/useTheme.ts` | Dark mode theme management | ✅ Complete |
 | `src/components/ProjectManager.tsx` | Project save/load UI | ✅ Complete |
 | `src/components/OfflineIndicator.tsx` | Online/offline status badge | ✅ Complete |
+| `src/components/SearchBar.tsx` | Real-time project search | ✅ Complete |
 
 ### Layout Components
 | File | Purpose | Status |
@@ -179,9 +199,10 @@ This file tracks the current state of development, lessons learned, and next ste
 | `src/components/layout/DashboardLayout.tsx` | Main layout wrapper with sidebar | ✅ Complete |
 | `src/components/layout/Sidebar.tsx` | Navigation sidebar with steps | ✅ Complete |
 | `src/components/layout/Header.tsx` | Top header with search/user | ✅ Complete |
+| `src/components/views/WelcomeView.tsx` | Welcome/home landing page | ✅ Complete |
 | `src/components/views/ProjectsView.tsx` | Project management grid | ✅ Complete |
-| `src/components/views/SettingsView.tsx` | Settings placeholder | ✅ Placeholder |
-| `src/components/views/HelpView.tsx` | Help & documentation | ✅ Complete |
+| `src/components/views/SettingsView.tsx` | Settings with theme toggle | ✅ Complete |
+| `src/components/views/HelpView.tsx` | Help & documentation with links | ✅ Complete |
 | `src/components/SystemLayoutDiagram.tsx` | SVG system schematic | ✅ Complete |
 
 ### PDF Generation
@@ -197,13 +218,13 @@ This file tracks the current state of development, lessons learned, and next ste
 | `src/calculations/units/index.ts` | Metric unit conversions | Medium |
 | `src/components/charts/PumpCurve.tsx` | Pump curve visualization | Low |
 
-### Dashboard Placeholders (Future)
+### Features Status
 | Feature | Current State |
 |---------|---------------|
-| Search functionality | UI only, not wired |
-| Notifications | UI placeholder |
-| User authentication | Not implemented |
-| Settings page | UI placeholder |
+| Search functionality | ✅ Fully implemented with real-time search |
+| Dark mode | ✅ Complete with Light/Dark/System toggle |
+| User authentication | ⏳ Not implemented (future Supabase integration) |
+| Cloud sync | ⏳ Not implemented (data stored locally in browser) |
 
 ---
 
