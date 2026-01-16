@@ -72,20 +72,20 @@ export function WelcomeView({ onGetStarted }: WelcomeViewProps) {
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {steps.map((step) => (
-            <Card key={step.number} className="relative overflow-hidden h-full">
-              <CardContent className="p-5 h-full">
-                <div className="flex items-center gap-4 h-full">
-                  <div className="flex-shrink-0 self-center">
+            <Card key={step.number} className="relative overflow-hidden">
+              <CardContent className="p-5">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 flex items-center">
                     <div className="w-12 h-12 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-lg">
                       {step.number}
                     </div>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
+                  <div className="flex-1 min-w-0 flex flex-col justify-center py-1">
+                    <div className="flex items-center gap-2">
                       <span className="text-teal-600">{step.icon}</span>
                       <h3 className="font-semibold text-gray-900">{step.title}</h3>
                     </div>
-                    <p className="text-sm text-gray-500 leading-snug">{step.description}</p>
+                    <p className="text-sm text-gray-500 leading-snug mt-1">{step.description}</p>
                   </div>
                 </div>
               </CardContent>
