@@ -10,6 +10,7 @@ const steps: Step[] = [
   { number: 2, title: 'System Layout' },
   { number: 3, title: 'Zone TDH' },
   { number: 4, title: 'Results' },
+  { number: 5, title: 'Configuration' },
 ]
 
 interface StepIndicatorProps {

@@ -12,7 +12,19 @@ import {
 } from '@/types/design'
 import { projectDB, type DBProject } from '@/lib/db'
 
-export type WizardStep = 1 | 2 | 3 | 4
+export type WizardStep = 1 | 2 | 3 | 4 | 5
+
+// Selected products for system configuration (Step 5)
+export interface SelectedProducts {
+  dripTubingSku?: string
+  headworksSku?: string
+  zoneControlType?: 'hydrotek' | 'solenoid'
+  hydrotekValveSku?: string
+  zoneBoxSku?: string
+  controlPanelSku?: string
+  pressureRegulatorSku?: string
+  flowMeterSku?: string
+}
 
 interface DesignState {
   // Current wizard step
@@ -33,6 +45,9 @@ interface DesignState {
   // Step 3 & 4: Results
   results: Partial<DesignResults>
 
+  // Step 5: Selected Products
+  selectedProducts: SelectedProducts
+
   // Actions
   setCurrentStep: (step: WizardStep) => void
   nextStep: () => void
@@ -51,6 +66,10 @@ interface DesignState {
   // Results actions
   setResults: (results: Partial<DesignResults>) => void
   clearResults: () => void
+
+  // Selected Products actions
+  updateSelectedProducts: (products: Partial<SelectedProducts>) => void
+  resetSelectedProducts: () => void
 
   // Project actions
   newProject: () => void
@@ -75,12 +94,13 @@ export const useDesignStore = create<DesignState>()(
       designInputs: { ...defaultDesignInputs },
       pipeSegments: [createDefaultPipeSegment(0)],
       results: {},
+      selectedProducts: {},
 
       // Step navigation
       setCurrentStep: (step) => set({ currentStep: step }),
       nextStep: () =>
         set((state) => ({
-          currentStep: Math.min(state.currentStep + 1, 4) as WizardStep,
+          currentStep: Math.min(state.currentStep + 1, 5) as WizardStep,
         })),
       prevStep: () =>
         set((state) => ({
@@ -127,6 +147,15 @@ export const useDesignStore = create<DesignState>()(
         })),
       clearResults: () => set({ results: {} }),
 
+      // Selected Products
+      updateSelectedProducts: (products) =>
+        set((state) => ({
+          selectedProducts: { ...state.selectedProducts, ...products },
+          isDirty: true,
+        })),
+      resetSelectedProducts: () =>
+        set({ selectedProducts: {}, isDirty: true }),
+
       // Project management
       newProject: () =>
         set({
@@ -136,6 +165,7 @@ export const useDesignStore = create<DesignState>()(
           designInputs: { ...defaultDesignInputs },
           pipeSegments: [createDefaultPipeSegment(0)],
           results: {},
+          selectedProducts: {},
           lastSavedAt: null,
           isDirty: false,
         }),
@@ -220,6 +250,7 @@ export const useDesignStore = create<DesignState>()(
         designInputs: state.designInputs,
         pipeSegments: state.pipeSegments,
         results: state.results,
+        selectedProducts: state.selectedProducts,
       }),
     }
   )

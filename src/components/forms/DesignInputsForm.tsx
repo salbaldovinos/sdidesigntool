@@ -4,6 +4,9 @@ import { z } from 'zod'
 import { useDesignStore } from '@/stores/designStore'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { DripTubeSelector } from '@/components/product-selector'
+import { getAllDripTubing } from '@/data'
+import * as React from 'react'
 
 const designInputsSchema = z.object({
   projectName: z.string().min(1, 'Project name is required'),
@@ -61,6 +64,32 @@ type DesignInputsFormData = z.infer<typeof designInputsSchema>
 
 export function DesignInputsForm() {
   const { designInputs, updateDesignInputs } = useDesignStore()
+  const [selectedTubingSku, setSelectedTubingSku] = React.useState<string | undefined>(undefined)
+
+  // Get all tubing products for lookup
+  const allTubing = React.useMemo(() => getAllDripTubing(), [])
+
+  // Handle tubing selection - auto-fill parameters
+  const handleTubingChange = React.useCallback(
+    (sku: string) => {
+      setSelectedTubingSku(sku)
+
+      // Find the selected product
+      const product = allTubing.find((t) => t.partNumber === sku)
+      if (product) {
+        // Auto-fill parameters based on product
+        // WaterflowPRO is 16mm OD (~0.55" ID), WaterflowECO is 17mm OD (~0.59" ID)
+        const tubeId = product.lineName.includes('ECO') ? 0.59 : 0.55
+        const updates: Record<string, number> = {
+          tubeId,
+          nominalFlowGPH: product.flowRate ?? 0.9,
+          emitterSpacing: product.emitterSpacing ?? 12,
+        }
+        updateDesignInputs(updates)
+      }
+    },
+    [allTubing, updateDesignInputs]
+  )
 
   const {
     register,
@@ -313,11 +342,30 @@ export function DesignInputsForm() {
           </div>
         </section>
 
+        {/* Drip Tube Selection */}
+        <section className="space-y-4">
+          <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-700">
+            Drip Tubing Selection
+          </h3>
+          <div className="space-y-2">
+            <Label>Select Geoflow Drip Tubing</Label>
+            <DripTubeSelector
+              value={selectedTubingSku}
+              onChange={handleTubingChange}
+            />
+          </div>
+        </section>
+
         {/* Drip Tube Parameters */}
         <section className="space-y-4">
-          <h3 className="text-base font-semibold text-gray-900 pb-2 border-b border-gray-200">
+          <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-700">
             Drip Tube Parameters
           </h3>
+          <p className="text-xs text-gray-500 dark:text-gray-400 -mt-2">
+            {selectedTubingSku
+              ? 'Auto-filled from selected tubing. Adjust if needed.'
+              : 'Select tubing above to auto-fill, or enter manually.'}
+          </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="tubeId">Tube ID (inches)</Label>

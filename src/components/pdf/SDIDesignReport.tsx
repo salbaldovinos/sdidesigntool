@@ -6,8 +6,9 @@ import {
   StyleSheet,
 } from '@react-pdf/renderer'
 import type { DesignInputs, PipeSegment } from '@/types/design'
+import type { BOMLineItem } from '@/types/assistant'
 
-// PDF Styles
+// PDF Styles - Updated with GeoFlow teal branding
 const styles = StyleSheet.create({
   page: {
     padding: 40,
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
   header: {
     marginBottom: 20,
     borderBottomWidth: 2,
-    borderBottomColor: '#2563eb',
+    borderBottomColor: '#0d9488', // teal-600
     paddingBottom: 10,
   },
   title: {
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Helvetica-Bold',
     marginTop: 8,
-    color: '#2563eb',
+    color: '#0d9488', // teal-600
   },
   date: {
     fontSize: 9,
@@ -69,9 +70,9 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   highlightBox: {
-    backgroundColor: '#eff6ff',
+    backgroundColor: '#f0fdfa', // teal-50
     borderWidth: 1,
-    borderColor: '#bfdbfe',
+    borderColor: '#99f6e4', // teal-200
     padding: 12,
     marginBottom: 16,
     borderRadius: 4,
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
   highlightTitle: {
     fontSize: 12,
     fontFamily: 'Helvetica-Bold',
-    color: '#1e40af',
+    color: '#115e59', // teal-800
     marginBottom: 8,
   },
   highlightGrid: {
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
   highlightValue: {
     fontSize: 20,
     fontFamily: 'Helvetica-Bold',
-    color: '#2563eb',
+    color: '#0d9488', // teal-600
   },
   highlightLabel: {
     fontSize: 9,
@@ -116,6 +117,12 @@ const styles = StyleSheet.create({
   },
   tableCell: {
     flex: 1,
+  },
+  tableCellSmall: {
+    flex: 0.5,
+  },
+  tableCellWide: {
+    flex: 2,
   },
   tableCellRight: {
     flex: 1,
@@ -153,7 +160,107 @@ const styles = StyleSheet.create({
   column: {
     flex: 1,
   },
+  // BOM-specific styles
+  bomCategory: {
+    marginBottom: 12,
+  },
+  bomCategoryTitle: {
+    fontSize: 11,
+    fontFamily: 'Helvetica-Bold',
+    color: '#0d9488',
+    marginBottom: 4,
+    paddingBottom: 2,
+    borderBottomWidth: 1,
+    borderBottomColor: '#99f6e4',
+  },
+  bomItem: {
+    flexDirection: 'row',
+    paddingVertical: 4,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f3f4f6',
+  },
+  bomSku: {
+    flex: 1,
+    fontSize: 8,
+    fontFamily: 'Helvetica-Bold',
+    color: '#374151',
+  },
+  bomDescription: {
+    flex: 3,
+    fontSize: 9,
+    color: '#4b5563',
+  },
+  bomQty: {
+    flex: 0.5,
+    textAlign: 'right',
+    fontSize: 9,
+    fontFamily: 'Helvetica-Bold',
+  },
+  bomUnit: {
+    flex: 0.3,
+    textAlign: 'left',
+    fontSize: 9,
+    color: '#6b7280',
+    paddingLeft: 4,
+  },
+  stockInStock: {
+    color: '#166534',
+    fontSize: 8,
+  },
+  stockOnDemand: {
+    color: '#92400e',
+    fontSize: 8,
+  },
+  summaryBox: {
+    backgroundColor: '#f0fdfa',
+    padding: 10,
+    marginTop: 16,
+    borderRadius: 4,
+  },
+  summaryRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 2,
+  },
+  summaryLabel: {
+    fontSize: 10,
+    color: '#115e59',
+  },
+  summaryValue: {
+    fontSize: 10,
+    fontFamily: 'Helvetica-Bold',
+    color: '#0d9488',
+  },
+  equipmentItem: {
+    marginBottom: 8,
+    padding: 8,
+    backgroundColor: '#f9fafb',
+    borderRadius: 4,
+  },
+  equipmentCategory: {
+    fontSize: 9,
+    color: '#6b7280',
+    marginBottom: 2,
+  },
+  equipmentName: {
+    fontSize: 11,
+    fontFamily: 'Helvetica-Bold',
+    color: '#1f2937',
+  },
+  equipmentSku: {
+    fontSize: 8,
+    color: '#9ca3af',
+    marginTop: 2,
+  },
 })
+
+// Selected equipment for the report
+interface SelectedEquipment {
+  category: string
+  name: string
+  sku: string
+  notes?: string
+}
 
 interface ReportData {
   projectName: string
@@ -191,13 +298,31 @@ interface ReportData {
     designFlowGPM: number
     limitingCondition: string
   }
+  // New: Equipment and BOM
+  selectedEquipment?: SelectedEquipment[]
+  bomItems?: BOMLineItem[]
+  bomSummary?: {
+    totalLineItems: number
+    inStockCount: number
+    onDemandCount: number
+  }
 }
 
 export function SDIDesignReport({ data }: { data: ReportData }) {
-  const { projectName, generatedDate, designInputs, pipeSegments, calculations } = data
+  const { projectName, generatedDate, designInputs, pipeSegments, calculations, selectedEquipment, bomItems, bomSummary } = data
+
+  // Group BOM items by category
+  const bomByCategory = bomItems?.reduce((acc, item) => {
+    if (!acc[item.category]) {
+      acc[item.category] = []
+    }
+    acc[item.category].push(item)
+    return acc
+  }, {} as Record<string, BOMLineItem[]>) ?? {}
 
   return (
     <Document>
+      {/* Page 1: Design Summary */}
       <Page size="LETTER" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
@@ -224,7 +349,7 @@ export function SDIDesignReport({ data }: { data: ReportData }) {
               <Text style={styles.highlightLabel}>PSI</Text>
             </View>
           </View>
-          <Text style={{ fontSize: 9, color: '#1e40af', marginTop: 8, textAlign: 'center' }}>
+          <Text style={{ fontSize: 9, color: '#115e59', marginTop: 8, textAlign: 'center' }}>
             Limiting Condition: {calculations.limitingCondition} Mode
           </Text>
         </View>
@@ -367,7 +492,7 @@ export function SDIDesignReport({ data }: { data: ReportData }) {
         </View>
       </Page>
 
-      {/* Page 2 - Design Inputs & Pipe Layout */}
+      {/* Page 2: Design Inputs & Pipe Layout */}
       <Page size="LETTER" style={styles.page}>
         <View style={styles.header}>
           <Text style={styles.title}>Design Inputs & System Layout</Text>
@@ -501,8 +626,102 @@ export function SDIDesignReport({ data }: { data: ReportData }) {
           <Text>Generated by Geoflow SDI Designer | Subsurface Drip Irrigation Design Tool</Text>
         </View>
       </Page>
+
+      {/* Page 3: Equipment Selection & Bill of Materials */}
+      {(selectedEquipment && selectedEquipment.length > 0) || (bomItems && bomItems.length > 0) ? (
+        <Page size="LETTER" style={styles.page}>
+          <View style={styles.header}>
+            <Text style={styles.title}>Equipment & Bill of Materials</Text>
+            <Text style={styles.projectName}>{projectName}</Text>
+          </View>
+
+          {/* Selected Equipment */}
+          {selectedEquipment && selectedEquipment.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Selected Equipment</Text>
+              <View style={styles.twoColumn}>
+                <View style={styles.column}>
+                  {selectedEquipment.slice(0, Math.ceil(selectedEquipment.length / 2)).map((item, index) => (
+                    <View key={index} style={styles.equipmentItem}>
+                      <Text style={styles.equipmentCategory}>{item.category}</Text>
+                      <Text style={styles.equipmentName}>{item.name}</Text>
+                      <Text style={styles.equipmentSku}>{item.sku}</Text>
+                      {item.notes && <Text style={{ fontSize: 8, color: '#6b7280', marginTop: 2 }}>{item.notes}</Text>}
+                    </View>
+                  ))}
+                </View>
+                <View style={styles.column}>
+                  {selectedEquipment.slice(Math.ceil(selectedEquipment.length / 2)).map((item, index) => (
+                    <View key={index} style={styles.equipmentItem}>
+                      <Text style={styles.equipmentCategory}>{item.category}</Text>
+                      <Text style={styles.equipmentName}>{item.name}</Text>
+                      <Text style={styles.equipmentSku}>{item.sku}</Text>
+                      {item.notes && <Text style={{ fontSize: 8, color: '#6b7280', marginTop: 2 }}>{item.notes}</Text>}
+                    </View>
+                  ))}
+                </View>
+              </View>
+            </View>
+          )}
+
+          {/* Bill of Materials */}
+          {bomItems && bomItems.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Bill of Materials</Text>
+
+              {/* BOM Table Header */}
+              <View style={[styles.tableHeader, { marginBottom: 0 }]}>
+                <Text style={styles.bomSku}>SKU</Text>
+                <Text style={styles.bomDescription}>Description</Text>
+                <Text style={styles.bomQty}>Qty</Text>
+                <Text style={styles.bomUnit}>Unit</Text>
+              </View>
+
+              {/* BOM Items by Category */}
+              {Object.entries(bomByCategory).map(([category, items]) => (
+                <View key={category} style={styles.bomCategory}>
+                  <Text style={styles.bomCategoryTitle}>{category}</Text>
+                  {items.map((item, index) => (
+                    <View key={index} style={styles.bomItem}>
+                      <Text style={styles.bomSku}>{item.sku}</Text>
+                      <Text style={styles.bomDescription}>
+                        {item.description.length > 50 ? item.description.substring(0, 50) + '...' : item.description}
+                      </Text>
+                      <Text style={styles.bomQty}>{item.quantity.toLocaleString()}</Text>
+                      <Text style={styles.bomUnit}>{item.unit}</Text>
+                    </View>
+                  ))}
+                </View>
+              ))}
+
+              {/* BOM Summary */}
+              {bomSummary && (
+                <View style={styles.summaryBox}>
+                  <View style={styles.summaryRow}>
+                    <Text style={styles.summaryLabel}>Total Line Items:</Text>
+                    <Text style={styles.summaryValue}>{bomSummary.totalLineItems}</Text>
+                  </View>
+                  <View style={styles.summaryRow}>
+                    <Text style={styles.summaryLabel}>In Stock:</Text>
+                    <Text style={[styles.summaryValue, { color: '#166534' }]}>{bomSummary.inStockCount}</Text>
+                  </View>
+                  <View style={styles.summaryRow}>
+                    <Text style={styles.summaryLabel}>On Demand:</Text>
+                    <Text style={[styles.summaryValue, { color: '#92400e' }]}>{bomSummary.onDemandCount}</Text>
+                  </View>
+                </View>
+              )}
+            </View>
+          )}
+
+          {/* Footer */}
+          <View style={styles.footer}>
+            <Text>Generated by Geoflow SDI Designer | Subsurface Drip Irrigation Design Tool</Text>
+          </View>
+        </Page>
+      ) : null}
     </Document>
   )
 }
 
-export type { ReportData }
+export type { ReportData, SelectedEquipment }
