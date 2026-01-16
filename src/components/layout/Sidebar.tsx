@@ -1,10 +1,8 @@
-import { useDesignStore, type WizardStep } from '@/stores/designStore'
 import {
   Home,
   FolderOpen,
   Settings,
   HelpCircle,
-  ChevronRight,
   Droplets,
 } from 'lucide-react'
 
@@ -26,7 +24,6 @@ interface SidebarProps {
 }
 
 export function Sidebar({ currentView, onViewChange, onClose }: SidebarProps) {
-  const { currentStep, setCurrentStep } = useDesignStore()
 
   const mainNavItems: NavItem[] = [
     {
@@ -84,13 +81,6 @@ export function Sidebar({ currentView, onViewChange, onClose }: SidebarProps) {
     },
   ]
 
-  const wizardSteps: { step: WizardStep; label: string }[] = [
-    { step: 1, label: 'Design Inputs' },
-    { step: 2, label: 'System Layout' },
-    { step: 3, label: 'Zone TDH' },
-    { step: 4, label: 'Results' },
-  ]
-
   return (
     <aside className="flex flex-col h-full bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 w-64">
       {/* Logo */}
@@ -127,51 +117,6 @@ export function Sidebar({ currentView, onViewChange, onClose }: SidebarProps) {
             )}
           </button>
         ))}
-
-        {/* Wizard Steps - Only show when on designer view */}
-        {currentView === 'designer' && (
-          <div className="mt-6">
-            <h3 className="px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">
-              Design Steps
-            </h3>
-            <div className="space-y-1">
-              {wizardSteps.map(({ step, label }) => (
-                <button
-                  key={step}
-                  onClick={() => {
-                    setCurrentStep(step)
-                    onClose?.()
-                  }}
-                  className={`
-                    w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors
-                    ${currentStep === step
-                      ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 font-medium'
-                      : currentStep > step
-                      ? 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
-                      : 'text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-600 dark:hover:text-gray-300'
-                    }
-                  `}
-                >
-                  <span className={`
-                    flex items-center justify-center w-6 h-6 rounded-full text-xs font-medium
-                    ${currentStep === step
-                      ? 'bg-teal-600 text-white'
-                      : currentStep > step
-                      ? 'bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-400'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400'
-                    }
-                  `}>
-                    {step}
-                  </span>
-                  <span>{label}</span>
-                  {currentStep === step && (
-                    <ChevronRight className="ml-auto h-4 w-4 text-teal-600 dark:text-teal-400" />
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
       </nav>
 
       {/* Bottom Navigation */}

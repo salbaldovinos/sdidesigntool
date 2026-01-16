@@ -385,6 +385,42 @@ export function WizardContainer() {
             {renderStep()}
           </div>
 
+          {/* Desktop Navigation - Below content */}
+          <div className="hidden lg:flex gap-3 mt-6 justify-between">
+            <Button
+              variant="outline"
+              onClick={prevStep}
+              disabled={currentStep === 1}
+            >
+              <ChevronLeft className="w-4 h-4 mr-1" />
+              <span>Previous</span>
+            </Button>
+
+            {currentStep < 5 ? (
+              <Button onClick={nextStep}>
+                <span>Next</span>
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            ) : (
+              <Button
+                onClick={handleGenerateReport}
+                disabled={isGenerating}
+              >
+                {isGenerating ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    <span>Generating...</span>
+                  </>
+                ) : (
+                  <>
+                    <FileText className="w-4 h-4 mr-2" />
+                    <span>Generate Report</span>
+                  </>
+                )}
+              </Button>
+            )}
+          </div>
+
           {/* Mobile Design Assistant (below content) */}
           <div className="lg:hidden mt-4">
             <AssistantPanel
