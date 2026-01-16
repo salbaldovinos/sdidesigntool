@@ -30,3 +30,4 @@ coverage/
 
 # PWA dev
 dev-dist/
+tsconfig.tsbuildinfo
