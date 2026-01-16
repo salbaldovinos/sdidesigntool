@@ -40,22 +40,24 @@ export function DashboardLayout({
       <div
         className={`
           fixed inset-y-0 left-0 z-50 lg:hidden transform transition-transform duration-300 ease-in-out
-          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full pointer-events-none'}
         `}
       >
-        <div className="relative h-full">
+        <div className="relative h-full pointer-events-auto">
           <Sidebar
             currentView={currentView}
             onViewChange={onViewChange}
             onClose={() => setSidebarOpen(false)}
           />
-          <button
-            onClick={() => setSidebarOpen(false)}
-            className="absolute top-4 -right-12 p-2 text-white hover:text-gray-200"
-            aria-label="Close sidebar"
-          >
-            <X className="h-6 w-6" />
-          </button>
+          {sidebarOpen && (
+            <button
+              onClick={() => setSidebarOpen(false)}
+              className="absolute top-4 -right-12 p-2 text-white hover:text-gray-200"
+              aria-label="Close sidebar"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          )}
         </div>
       </div>
 
