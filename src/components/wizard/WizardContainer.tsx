@@ -29,7 +29,11 @@ import {
 export function WizardContainer() {
   const { currentStep, setCurrentStep, nextStep, prevStep, designInputs, pipeSegments, selectedProducts } = useDesignStore()
   const { feedback } = useAssistantFeedback(currentStep)
+  const { hasErrors: hasValidationErrors } = useAssistantFeedback() // Overall validation (all steps)
   const [isGenerating, setIsGenerating] = React.useState(false)
+
+  // Disable report generation until user reaches step 5 and has no validation errors
+  const canGenerateReport = currentStep === 5 && !hasValidationErrors && !isGenerating
 
   // Generate PDF report
   const handleGenerateReport = React.useCallback(async () => {
@@ -356,7 +360,7 @@ export function WizardContainer() {
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-4">
               <Button
                 onClick={handleGenerateReport}
-                disabled={isGenerating}
+                disabled={!canGenerateReport}
                 className="w-full"
                 variant={currentStep === 5 ? 'default' : 'outline'}
               >
@@ -373,7 +377,11 @@ export function WizardContainer() {
                 )}
               </Button>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
-                Download PDF with design calculations and BOM
+                {currentStep < 5
+                  ? 'Complete all steps to generate report'
+                  : hasValidationErrors
+                  ? 'Fix validation errors to generate report'
+                  : 'Download PDF with design calculations and BOM'}
               </p>
             </div>
           </div>
@@ -404,7 +412,7 @@ export function WizardContainer() {
             ) : (
               <Button
                 onClick={handleGenerateReport}
-                disabled={isGenerating}
+                disabled={!canGenerateReport}
               >
                 {isGenerating ? (
                   <>
@@ -451,7 +459,7 @@ export function WizardContainer() {
               ) : (
                 <Button
                   onClick={handleGenerateReport}
-                  disabled={isGenerating}
+                  disabled={!canGenerateReport}
                   className="flex-1"
                 >
                   {isGenerating ? (
