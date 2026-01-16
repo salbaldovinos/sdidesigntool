@@ -15,7 +15,7 @@ type ViewType = 'welcome' | 'designer' | 'projects' | 'settings' | 'help'
 const viewConfig: Record<ViewType, { title: string; subtitle: string }> = {
   welcome: {
     title: 'Welcome',
-    subtitle: 'Get started with GeoFlow SDI Designer',
+    subtitle: 'Get started with Geoflow SDI Designer',
   },
   designer: {
     title: 'Design Tool',

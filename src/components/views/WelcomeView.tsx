@@ -50,7 +50,7 @@ export function WelcomeView({ onGetStarted }: WelcomeViewProps) {
           SDI Design Made Simple
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-          Welcome to GeoFlow SDI Designer
+          Welcome to Geoflow SDI Designer
         </h1>
         <p className="text-lg text-gray-600 max-w-xl mx-auto">
           Design professional subsurface drip irrigation systems with accurate hydraulic calculations and instant PDF reports.

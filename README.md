@@ -1,4 +1,4 @@
-# GeoFlow SDI Designer
+# Geoflow SDI Designer
 
 A Progressive Web App (PWA) for designing Subsurface Drip Irrigation (SDI) systems. Built with React 19, TypeScript, and Tailwind CSS v4.
 
@@ -153,7 +153,7 @@ The app can be installed as a standalone application:
 
 ## Color Palette
 
-The app uses the GeoFlow brand colors:
+The app uses the Geoflow brand colors:
 - **Primary:** Teal (#008080)
 - **Background:** Gray-50 (#F9FAFB)
 - **Accent:** Teal variants (50-900)
@@ -165,7 +165,7 @@ The app uses the GeoFlow brand colors:
 
 ## License
 
-Proprietary - GeoFlow Systems
+Proprietary - Geoflow Systems
 
 ---
 

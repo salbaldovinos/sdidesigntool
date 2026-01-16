@@ -64,7 +64,7 @@ This file tracks the current state of development, lessons learned, and next ste
 - [x] Includes: Pump selection criteria, area analysis, flow requirements, TDH breakdown, design inputs, pipe layout
 
 #### ✅ Phase 5.5: Dashboard Layout & Responsive Redesign
-- [x] GeoFlow teal color palette (#008080) applied throughout
+- [x] Geoflow teal color palette (#008080) applied throughout
 - [x] Mobile-first responsive design with DM Sans typography
 - [x] Dashboard layout with collapsible sidebar navigation
 - [x] Header with search, notifications, user avatar placeholders

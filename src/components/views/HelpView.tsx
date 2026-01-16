@@ -41,7 +41,7 @@ export function HelpView() {
       <div>
         <h2 className="text-2xl font-bold text-gray-900">Help & Documentation</h2>
         <p className="text-sm text-gray-500 mt-1">
-          Learn how to use the GeoFlow SDI Designer
+          Learn how to use the Geoflow SDI Designer
         </p>
       </div>
 
@@ -55,7 +55,7 @@ export function HelpView() {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-sm text-gray-600">
-            The GeoFlow SDI Designer helps you design subsurface drip irrigation systems
+            The Geoflow SDI Designer helps you design subsurface drip irrigation systems
             by calculating hydraulic requirements and generating professional reports.
           </p>
 
@@ -118,12 +118,12 @@ export function HelpView() {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-sm text-gray-600">
-            Need help with your SDI design? Contact GeoFlow support for assistance.
+            Need help with your SDI design? Contact Geoflow support for assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
-              Visit GeoFlow Website
+              Visit Geoflow Website
             </Button>
             <Button variant="outline" className="gap-2">
               <MessageCircle className="h-4 w-4" />
