@@ -77,7 +77,7 @@ function App() {
   const renderView = () => {
     switch (currentView) {
       case 'welcome':
-        return <WelcomeView onGetStarted={handleGetStarted} />
+        return <WelcomeView onGetStarted={handleGetStarted} onNavigateToHelp={() => setCurrentView('help')} />
       case 'designer':
         return <WizardContainer />
       case 'projects':
@@ -87,7 +87,7 @@ function App() {
       case 'help':
         return <HelpView />
       default:
-        return <WelcomeView onGetStarted={handleGetStarted} />
+        return <WelcomeView onGetStarted={handleGetStarted} onNavigateToHelp={() => setCurrentView('help')} />
     }
   }
 
