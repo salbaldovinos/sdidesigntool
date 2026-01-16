@@ -1,4 +1,4 @@
-import { Menu, Bell, User, Search } from 'lucide-react'
+import { Menu, User, Search } from 'lucide-react'
 import { OfflineIndicator } from '@/components/OfflineIndicator'
 import { SearchBar } from '@/components/SearchBar'
 import { useState } from 'react'
@@ -54,12 +54,6 @@ export function Header({ title, subtitle, onMenuClick, onSelectProject, actions 
           {actions}
 
           <OfflineIndicator />
-
-          {/* Notifications */}
-          <button className="relative p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
-            <Bell className="h-5 w-5" />
-            <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />
-          </button>
 
           {/* User Avatar Placeholder */}
           <button className="flex items-center justify-center w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
