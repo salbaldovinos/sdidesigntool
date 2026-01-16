@@ -9,6 +9,7 @@ interface DashboardLayoutProps {
   subtitle?: string
   currentView: 'designer' | 'projects' | 'settings' | 'help'
   onViewChange: (view: 'designer' | 'projects' | 'settings' | 'help') => void
+  onSelectProject: (projectId: string) => void
   headerActions?: React.ReactNode
 }
 
@@ -18,6 +19,7 @@ export function DashboardLayout({
   subtitle,
   currentView,
   onViewChange,
+  onSelectProject,
   headerActions,
 }: DashboardLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -69,6 +71,7 @@ export function DashboardLayout({
           title={title}
           subtitle={subtitle}
           onMenuClick={() => setSidebarOpen(true)}
+          onSelectProject={onSelectProject}
           actions={headerActions}
         />
 

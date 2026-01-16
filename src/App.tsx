@@ -34,11 +34,21 @@ function App() {
   const [currentView, setCurrentView] = useState<ViewType>('designer')
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
 
-  const { designInputs, saveToDatabase, isDirty } = useDesignStore()
+  const { designInputs, saveToDatabase, loadFromDatabase, isDirty } = useDesignStore()
   const projectName = designInputs.projectName || 'Untitled Project'
 
   // Enable auto-save
   useAutoSave()
+
+  // Handle project selection from search
+  const handleSelectProject = async (projectId: string) => {
+    try {
+      await loadFromDatabase(projectId)
+      setCurrentView('designer')
+    } catch (error) {
+      console.error('Failed to load project:', error)
+    }
+  }
 
   const handleSave = async () => {
     setSaveStatus('saving')
@@ -114,6 +124,7 @@ function App() {
       subtitle={viewConfig[currentView].subtitle}
       currentView={currentView}
       onViewChange={setCurrentView}
+      onSelectProject={handleSelectProject}
       headerActions={headerActions}
     >
       {renderView()}

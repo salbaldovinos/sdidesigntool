@@ -1,14 +1,19 @@
-import { Menu, Bell, Search, User } from 'lucide-react'
+import { Menu, Bell, User, Search } from 'lucide-react'
 import { OfflineIndicator } from '@/components/OfflineIndicator'
+import { SearchBar } from '@/components/SearchBar'
+import { useState } from 'react'
 
 interface HeaderProps {
   title: string
   subtitle?: string
   onMenuClick: () => void
+  onSelectProject: (projectId: string) => void
   actions?: React.ReactNode
 }
 
-export function Header({ title, subtitle, onMenuClick, actions }: HeaderProps) {
+export function Header({ title, subtitle, onMenuClick, onSelectProject, actions }: HeaderProps) {
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
+
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-gray-200">
       <div className="flex items-center justify-between h-14 px-4">
@@ -30,20 +35,22 @@ export function Header({ title, subtitle, onMenuClick, actions }: HeaderProps) {
           </div>
         </div>
 
-        {/* Center: Search (hidden on mobile) */}
+        {/* Center: Search (hidden on mobile, shown on md+) */}
         <div className="hidden md:flex flex-1 max-w-md mx-8">
-          <div className="relative w-full">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search projects..."
-              className="w-full h-10 pl-10 pr-4 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-            />
-          </div>
+          <SearchBar onSelectProject={onSelectProject} />
         </div>
 
         {/* Right: Actions */}
         <div className="flex items-center gap-2">
+          {/* Mobile search toggle */}
+          <button
+            onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
+            className="md:hidden p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg"
+            aria-label="Search"
+          >
+            <Search className="h-5 w-5" />
+          </button>
+
           {actions}
 
           <OfflineIndicator />
@@ -60,6 +67,19 @@ export function Header({ title, subtitle, onMenuClick, actions }: HeaderProps) {
           </button>
         </div>
       </div>
+
+      {/* Mobile search bar (expandable) */}
+      {mobileSearchOpen && (
+        <div className="md:hidden px-4 pb-3">
+          <SearchBar
+            onSelectProject={(id) => {
+              onSelectProject(id)
+              setMobileSearchOpen(false)
+            }}
+            placeholder="Search projects..."
+          />
+        </div>
+      )}
 
       {/* Mobile title bar */}
       <div className="sm:hidden px-4 pb-3">
