@@ -121,14 +121,26 @@ export function HelpView() {
             Need help with your SDI design? Contact Geoflow support for assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button variant="outline" className="gap-2">
-              <ExternalLink className="h-4 w-4" />
-              Visit Geoflow Website
-            </Button>
-            <Button variant="outline" className="gap-2">
-              <MessageCircle className="h-4 w-4" />
-              Contact Support
-            </Button>
+            <a
+              href="https://geoflow.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="gap-2 w-full">
+                <ExternalLink className="h-4 w-4" />
+                Visit Geoflow Website
+              </Button>
+            </a>
+            <a
+              href="https://geoflow.com/contact/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="gap-2 w-full">
+                <MessageCircle className="h-4 w-4" />
+                Contact Support
+              </Button>
+            </a>
           </div>
         </CardContent>
       </Card>
