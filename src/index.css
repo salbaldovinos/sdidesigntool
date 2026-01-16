@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+
+  /* GeoFlow Teal - Primary Brand Color */
+  --color-teal-50: #E6F7F7;
+  --color-teal-100: #B3E6E6;
+  --color-teal-200: #80D4D4;
+  --color-teal-300: #4DC2C2;
+  --color-teal-400: #26B3B3;
+  --color-teal-500: #009999;
+  --color-teal-600: #008080;
+  --color-teal-700: #006666;
+  --color-teal-800: #004D4D;
+  --color-teal-900: #003333;
+
+  /* GeoFlow Navy - Secondary Color */
+  --color-navy-50: #E8EBF0;
+  --color-navy-100: #C4CCD9;
+  --color-navy-200: #9DABC2;
+  --color-navy-300: #7689AA;
+  --color-navy-400: #586F98;
+  --color-navy-500: #3A5586;
+  --color-navy-600: #2E4A7A;
+  --color-navy-700: #223C6A;
+  --color-navy-800: #182E5A;
+  --color-navy-900: #0D1F3C;
+
+  /* Semantic Colors */
+  --color-background: #FFFFFF;
+  --color-foreground: #1A2B3C;
+  --color-muted: #F8FAFB;
+  --color-muted-foreground: #5A6978;
+  --color-border: #E2E8F0;
+  --color-border-strong: #CBD5E1;
+
+  /* Primary Interactive */
+  --color-primary: #008080;
+  --color-primary-hover: #006666;
+  --color-primary-foreground: #FFFFFF;
+
+  /* Status Colors */
+  --color-success: #10B981;
+  --color-success-bg: #D1FAE5;
+  --color-warning: #F59E0B;
+  --color-warning-bg: #FEF3C7;
+  --color-error: #EF4444;
+  --color-error-bg: #FEE2E2;
+  --color-info: #009999;
+  --color-info-bg: #E6F7F7;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Technical/monospace values */
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom utility for teal color scale (Tailwind v4 compatibility) */
+@layer utilities {
+  .bg-teal-50 { background-color: #E6F7F7; }
+  .bg-teal-100 { background-color: #B3E6E6; }
+  .bg-teal-200 { background-color: #80D4D4; }
+  .bg-teal-300 { background-color: #4DC2C2; }
+  .bg-teal-400 { background-color: #26B3B3; }
+  .bg-teal-500 { background-color: #009999; }
+  .bg-teal-600 { background-color: #008080; }
+  .bg-teal-700 { background-color: #006666; }
+  .bg-teal-800 { background-color: #004D4D; }
+  .bg-teal-900 { background-color: #003333; }
+
+  .text-teal-50 { color: #E6F7F7; }
+  .text-teal-100 { color: #B3E6E6; }
+  .text-teal-200 { color: #80D4D4; }
+  .text-teal-300 { color: #4DC2C2; }
+  .text-teal-400 { color: #26B3B3; }
+  .text-teal-500 { color: #009999; }
+  .text-teal-600 { color: #008080; }
+  .text-teal-700 { color: #006666; }
+  .text-teal-800 { color: #004D4D; }
+  .text-teal-900 { color: #003333; }
+
+  .border-teal-50 { border-color: #E6F7F7; }
+  .border-teal-100 { border-color: #B3E6E6; }
+  .border-teal-200 { border-color: #80D4D4; }
+  .border-teal-300 { border-color: #4DC2C2; }
+  .border-teal-400 { border-color: #26B3B3; }
+  .border-teal-500 { border-color: #009999; }
+  .border-teal-600 { border-color: #008080; }
+  .border-teal-700 { border-color: #006666; }
+  .border-teal-800 { border-color: #004D4D; }
+  .border-teal-900 { border-color: #003333; }
+
+  .ring-teal-500 { --tw-ring-color: #009999; }
+  .ring-teal-600 { --tw-ring-color: #008080; }
+
+  /* Hover variants */
+  .hover\:bg-teal-50:hover { background-color: #E6F7F7; }
+  .hover\:bg-teal-100:hover { background-color: #B3E6E6; }
+  .hover\:bg-teal-600:hover { background-color: #008080; }
+  .hover\:bg-teal-700:hover { background-color: #006666; }
+  .hover\:bg-teal-800:hover { background-color: #004D4D; }
+
+  .hover\:text-teal-600:hover { color: #008080; }
+  .hover\:text-teal-700:hover { color: #006666; }
+  .hover\:border-teal-600:hover { border-color: #008080; }
+
+  /* Focus variants */
+  .focus\:ring-teal-500:focus { --tw-ring-color: #009999; }
+  .focus\:border-teal-500:focus { border-color: #009999; }
+  .focus-visible\:ring-teal-500:focus-visible { --tw-ring-color: #009999; }
+}
