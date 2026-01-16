@@ -6,7 +6,7 @@ This file tracks the current state of development, lessons learned, and next ste
 
 ## Current Status: Phase 6 (Testing & Deployment)
 
-**Last Updated:** 2026-01-15 (Welcome View, Dark Mode, Search)
+**Last Updated:** 2026-01-15 (Product Catalog, Dark Mode, Search)
 
 ### Completed Phases
 
@@ -90,6 +90,19 @@ This file tracks the current state of development, lessons learned, and next ste
 - [x] Inline script for flash-free theme loading
 - [x] Dark mode support for all layout components
 
+#### ✅ Phase 5.8: Product Catalog Data
+- [x] Geoflow Quick Reference Guide PDF parsed
+- [x] Complete product catalog JSON (`src/data/geoflow-products.json`)
+- [x] TypeScript types for all product categories
+- [x] Helper functions for product selection
+- [x] ~450 products across 11 categories:
+  - Drip tubing (WaterflowPRO, WaterflowECO)
+  - Headworks (Vortex, BioDisc filters)
+  - Zone boxes and control panels
+  - Flow meters (MultiJet, Digital, Electromagnetic)
+  - Filters, valves, pressure regulators
+  - Air vents, fittings, accessories
+
 #### ✅ Phase 6: Testing & Deployment
 - [x] Excel validation script (`scripts/validate-calculations.js`)
 - [x] Unit tests for hydraulic calculations (34 tests in `hydraulics.test.ts`)
@@ -140,24 +153,29 @@ This file tracks the current state of development, lessons learned, and next ste
 ## Next Steps (Priority Order)
 
 ### Future Enhancements (Post-MVP)
-1. **User Authentication**
+1. **Product Recommendations UI**
+   - Use product catalog data to recommend equipment
+   - Bill of materials generation based on design
+   - Display recommended drip tubing, filters, valves
+
+2. **User Authentication**
    - Supabase integration for user accounts
    - Cloud sync for projects across devices
    - Share projects between users
 
-2. **Add pump curve visualization**
+3. **Add pump curve visualization**
    - Install Visx/Recharts
    - Display pump operating point
-   - Show system curve vs pump curve (requires pump catalog)
+   - Show system curve vs pump curve
 
-3. **Advanced irrigation calculations**
+4. **Advanced irrigation calculations**
    - Emission uniformity (EU%) calculation
    - Lateral design calculations
 
-4. **Unit conversions**
+5. **Unit conversions**
    - Support for metric units (LPM, kPa, meters)
 
-5. **Integration tests**
+6. **Integration tests**
    - End-to-end wizard flow testing
    - Project save/load testing
 
@@ -210,6 +228,14 @@ This file tracks the current state of development, lessons learned, and next ste
 |------|---------|--------|
 | `src/components/pdf/SDIDesignReport.tsx` | 2-page PDF report template | ✅ Complete |
 
+### Product Catalog Data
+| File | Purpose | Status |
+|------|---------|--------|
+| `src/data/geoflow-products.json` | Complete product catalog (~450 products) | ✅ Complete |
+| `src/data/geoflow-products.types.ts` | TypeScript interfaces for products | ✅ Complete |
+| `src/data/index.ts` | Helper functions for product selection | ✅ Complete |
+| `docs/Geoflow Sales Quick Reference Guide Sept 07.pdf` | Source product reference | ✅ Added |
+
 ### Not Yet Created (Post-MVP)
 | File | Purpose | Priority |
 |------|---------|----------|
@@ -223,8 +249,10 @@ This file tracks the current state of development, lessons learned, and next ste
 |---------|---------------|
 | Search functionality | ✅ Fully implemented with real-time search |
 | Dark mode | ✅ Complete with Light/Dark/System toggle |
+| Product catalog | ✅ Complete with ~450 products and helper functions |
 | User authentication | ⏳ Not implemented (future Supabase integration) |
 | Cloud sync | ⏳ Not implemented (data stored locally in browser) |
+| Product recommendations | ⏳ Data ready, UI not implemented |
 
 ---
 
