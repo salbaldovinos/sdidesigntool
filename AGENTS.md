@@ -6,7 +6,7 @@ This file tracks the current state of development, lessons learned, and next ste
 
 ## Current Status: Phase 6 (Testing & Deployment)
 
-**Last Updated:** 2025-01-15 (Phases 1-5 Complete - Ready for Deployment)
+**Last Updated:** 2025-01-15 (Dashboard Layout Added)
 
 ### Completed Phases
 
@@ -63,9 +63,22 @@ This file tracks the current state of development, lessons learned, and next ste
 - [x] Download PDF button in Results view
 - [x] Includes: Pump selection criteria, area analysis, flow requirements, TDH breakdown, design inputs, pipe layout
 
-#### ⏳ Phase 6: Testing & Deployment (Not Started)
+#### ✅ Phase 5.5: Dashboard Layout & Responsive Redesign
+- [x] GeoFlow teal color palette (#008080) applied throughout
+- [x] Mobile-first responsive design with DM Sans typography
+- [x] Dashboard layout with collapsible sidebar navigation
+- [x] Header with search, notifications, user avatar placeholders
+- [x] Sidebar with logo, nav items, and wizard step progress
+- [x] Projects view for project management
+- [x] Settings and Help placeholder views
+- [x] System Layout reference diagram (SVG schematic)
+- [x] 44px touch targets for mobile accessibility
+
+#### ⏳ Phase 6: Testing & Deployment (Partially Complete)
 - [x] Excel validation script (`scripts/validate-calculations.js`)
-- [ ] Unit tests for all calculation modules
+- [x] Unit tests for hydraulic calculations (34 tests in `hydraulics.test.ts`)
+- [x] ESLint configuration (`eslint.config.js`)
+- [x] Vitest test framework setup
 - [ ] Integration tests for wizard flow
 - [ ] Vercel deployment
 
@@ -160,18 +173,37 @@ This file tracks the current state of development, lessons learned, and next ste
 | `src/components/ProjectManager.tsx` | Project save/load UI | ✅ Complete |
 | `src/components/OfflineIndicator.tsx` | Online/offline status badge | ✅ Complete |
 
+### Layout Components
+| File | Purpose | Status |
+|------|---------|--------|
+| `src/components/layout/DashboardLayout.tsx` | Main layout wrapper with sidebar | ✅ Complete |
+| `src/components/layout/Sidebar.tsx` | Navigation sidebar with steps | ✅ Complete |
+| `src/components/layout/Header.tsx` | Top header with search/user | ✅ Complete |
+| `src/components/views/ProjectsView.tsx` | Project management grid | ✅ Complete |
+| `src/components/views/SettingsView.tsx` | Settings placeholder | ✅ Placeholder |
+| `src/components/views/HelpView.tsx` | Help & documentation | ✅ Complete |
+| `src/components/SystemLayoutDiagram.tsx` | SVG system schematic | ✅ Complete |
+
 ### PDF Generation
 | File | Purpose | Status |
 |------|---------|--------|
 | `src/components/pdf/SDIDesignReport.tsx` | 2-page PDF report template | ✅ Complete |
 
-### Not Yet Created
-| File | Purpose |
-|------|---------|
-| `src/calculations/irrigation/index.ts` | Emitter & lateral calcs |
-| `src/calculations/pump/index.ts` | TDH & pump calcs |
-| `src/calculations/units/index.ts` | Unit conversions |
-| `src/components/charts/PumpCurve.tsx` | Pump curve chart |
+### Not Yet Created (Post-MVP)
+| File | Purpose | Priority |
+|------|---------|----------|
+| `src/calculations/irrigation/index.ts` | Emitter uniformity (EU%), lateral sizing | Low |
+| `src/calculations/pump/index.ts` | Pump curve interpolation, NPSH | Low |
+| `src/calculations/units/index.ts` | Metric unit conversions | Medium |
+| `src/components/charts/PumpCurve.tsx` | Pump curve visualization | Low |
+
+### Dashboard Placeholders (Future)
+| Feature | Current State |
+|---------|---------------|
+| Search functionality | UI only, not wired |
+| Notifications | UI placeholder |
+| User authentication | Not implemented |
+| Settings page | UI placeholder |
 
 ---
 
