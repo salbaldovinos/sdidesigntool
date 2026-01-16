@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useSyncExternalStore } from 'react'
 
 type Theme = 'light' | 'dark' | 'system'
 
@@ -20,7 +20,7 @@ function getStoredTheme(): Theme {
   return 'light'
 }
 
-function applyTheme(theme: Theme) {
+function applyThemeToDOM(theme: Theme) {
   const root = document.documentElement
   const effectiveTheme = theme === 'system' ? getSystemTheme() : theme
 
@@ -29,30 +29,53 @@ function applyTheme(theme: Theme) {
   } else {
     root.classList.remove('dark')
   }
+
+  return effectiveTheme
+}
+
+// Simple store for theme state
+let currentTheme: Theme = typeof window !== 'undefined' ? getStoredTheme() : 'light'
+const listeners = new Set<() => void>()
+
+function subscribe(listener: () => void) {
+  listeners.add(listener)
+  return () => listeners.delete(listener)
+}
+
+function getSnapshot() {
+  return currentTheme
+}
+
+function getServerSnapshot() {
+  return 'light' as Theme
 }
 
 export function useTheme() {
-  const [theme, setThemeState] = useState<Theme>(getStoredTheme)
-  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light')
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
+  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window === 'undefined') return 'light'
+    return theme === 'system' ? getSystemTheme() : theme
+  })
 
   const setTheme = useCallback((newTheme: Theme) => {
-    setThemeState(newTheme)
+    currentTheme = newTheme
     localStorage.setItem(THEME_KEY, newTheme)
-    applyTheme(newTheme)
-    setResolvedTheme(newTheme === 'system' ? getSystemTheme() : newTheme)
+    const resolved = applyThemeToDOM(newTheme)
+    setResolvedTheme(resolved)
+    listeners.forEach(listener => listener())
   }, [])
 
   // Apply theme on mount and listen for system theme changes
   useEffect(() => {
-    applyTheme(theme)
-    setResolvedTheme(theme === 'system' ? getSystemTheme() : theme)
+    const resolved = applyThemeToDOM(theme)
+    setResolvedTheme(resolved)
 
     // Listen for system theme changes
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     const handleChange = () => {
-      if (theme === 'system') {
-        applyTheme('system')
-        setResolvedTheme(getSystemTheme())
+      if (currentTheme === 'system') {
+        const resolved = applyThemeToDOM('system')
+        setResolvedTheme(resolved)
       }
     }
 
