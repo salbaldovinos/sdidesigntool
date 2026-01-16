@@ -70,6 +70,21 @@
   .font-mono {
     font-family: var(--font-mono);
   }
+
+  /* Dark mode base styles */
+  .dark {
+    --color-background: #0f172a;
+    --color-foreground: #f1f5f9;
+    --color-muted: #1e293b;
+    --color-muted-foreground: #94a3b8;
+    --color-border: #334155;
+    --color-border-strong: #475569;
+  }
+
+  .dark body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
 }
 
 /* Custom utility for teal color scale (Tailwind v4 compatibility) */
@@ -125,4 +140,36 @@
   .focus\:ring-teal-500:focus { --tw-ring-color: #009999; }
   .focus\:border-teal-500:focus { border-color: #009999; }
   .focus-visible\:ring-teal-500:focus-visible { --tw-ring-color: #009999; }
+
+  /* Dark mode utilities */
+  .dark\:bg-gray-900:is(.dark *) { background-color: #0f172a; }
+  .dark\:bg-gray-800:is(.dark *) { background-color: #1e293b; }
+  .dark\:bg-gray-700:is(.dark *) { background-color: #334155; }
+  .dark\:bg-gray-600:is(.dark *) { background-color: #475569; }
+  .dark\:bg-gray-50:is(.dark *) { background-color: #1e293b; }
+  .dark\:bg-white:is(.dark *) { background-color: #1e293b; }
+
+  .dark\:text-white:is(.dark *) { color: #ffffff; }
+  .dark\:text-gray-100:is(.dark *) { color: #f1f5f9; }
+  .dark\:text-gray-200:is(.dark *) { color: #e2e8f0; }
+  .dark\:text-gray-300:is(.dark *) { color: #cbd5e1; }
+  .dark\:text-gray-400:is(.dark *) { color: #94a3b8; }
+  .dark\:text-gray-500:is(.dark *) { color: #64748b; }
+  .dark\:text-gray-900:is(.dark *) { color: #f1f5f9; }
+
+  .dark\:border-gray-700:is(.dark *) { border-color: #334155; }
+  .dark\:border-gray-600:is(.dark *) { border-color: #475569; }
+  .dark\:border-gray-800:is(.dark *) { border-color: #1e293b; }
+
+  .dark\:hover\:bg-gray-700:hover:is(.dark *) { background-color: #334155; }
+  .dark\:hover\:bg-gray-800:hover:is(.dark *) { background-color: #1e293b; }
+  .dark\:hover\:text-gray-200:hover:is(.dark *) { color: #e2e8f0; }
+
+  /* Dark teal variants */
+  .dark\:bg-teal-900:is(.dark *) { background-color: #003333; }
+  .dark\:bg-teal-800:is(.dark *) { background-color: #004D4D; }
+  .dark\:bg-teal-950:is(.dark *) { background-color: #002626; }
+  .dark\:text-teal-400:is(.dark *) { color: #26B3B3; }
+  .dark\:text-teal-300:is(.dark *) { color: #4DC2C2; }
+  .dark\:border-teal-800:is(.dark *) { border-color: #004D4D; }
 }
