@@ -39,11 +39,17 @@ function App() {
   const [currentView, setCurrentView] = useState<ViewType>('welcome')
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
 
-  const { designInputs, saveToDatabase, loadFromDatabase, isDirty } = useDesignStore()
+  const { designInputs, saveToDatabase, loadFromDatabase, newProject, isDirty } = useDesignStore()
   const projectName = designInputs.projectName || 'Untitled Project'
 
   // Enable auto-save
   useAutoSave()
+
+  // Handle starting a new project from Welcome view
+  const handleGetStarted = () => {
+    newProject()
+    setCurrentView('designer')
+  }
 
   // Handle project selection from search
   const handleSelectProject = async (projectId: string) => {
@@ -71,7 +77,7 @@ function App() {
   const renderView = () => {
     switch (currentView) {
       case 'welcome':
-        return <WelcomeView onGetStarted={() => setCurrentView('designer')} />
+        return <WelcomeView onGetStarted={handleGetStarted} />
       case 'designer':
         return <WizardContainer />
       case 'projects':
@@ -81,7 +87,7 @@ function App() {
       case 'help':
         return <HelpView />
       default:
-        return <WelcomeView onGetStarted={() => setCurrentView('designer')} />
+        return <WelcomeView onGetStarted={handleGetStarted} />
     }
   }
 
