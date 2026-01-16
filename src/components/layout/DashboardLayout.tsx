@@ -3,12 +3,14 @@ import { Sidebar } from './Sidebar'
 import { Header } from './Header'
 import { X } from 'lucide-react'
 
+type ViewType = 'welcome' | 'designer' | 'projects' | 'settings' | 'help'
+
 interface DashboardLayoutProps {
   children: React.ReactNode
   title: string
   subtitle?: string
-  currentView: 'designer' | 'projects' | 'settings' | 'help'
-  onViewChange: (view: 'designer' | 'projects' | 'settings' | 'help') => void
+  currentView: ViewType
+  onViewChange: (view: ViewType) => void
   onSelectProject: (projectId: string) => void
   headerActions?: React.ReactNode
 }

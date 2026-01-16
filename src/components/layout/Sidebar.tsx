@@ -1,5 +1,6 @@
 import { useDesignStore, type WizardStep } from '@/stores/designStore'
 import {
+  Home,
   FolderOpen,
   Settings,
   HelpCircle,
@@ -16,9 +17,11 @@ interface NavItem {
   badge?: string
 }
 
+type ViewType = 'welcome' | 'designer' | 'projects' | 'settings' | 'help'
+
 interface SidebarProps {
-  currentView: 'designer' | 'projects' | 'settings' | 'help'
-  onViewChange: (view: 'designer' | 'projects' | 'settings' | 'help') => void
+  currentView: ViewType
+  onViewChange: (view: ViewType) => void
   onClose?: () => void
 }
 
@@ -26,6 +29,16 @@ export function Sidebar({ currentView, onViewChange, onClose }: SidebarProps) {
   const { currentStep, setCurrentStep } = useDesignStore()
 
   const mainNavItems: NavItem[] = [
+    {
+      id: 'welcome',
+      label: 'Home',
+      icon: <Home className="h-5 w-5" />,
+      onClick: () => {
+        onViewChange('welcome')
+        onClose?.()
+      },
+      active: currentView === 'welcome',
+    },
     {
       id: 'designer',
       label: 'Design Tool',

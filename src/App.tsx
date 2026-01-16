@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
 import { WizardContainer } from '@/components/wizard/WizardContainer'
+import { WelcomeView } from '@/components/views/WelcomeView'
 import { ProjectsView } from '@/components/views/ProjectsView'
 import { SettingsView } from '@/components/views/SettingsView'
 import { HelpView } from '@/components/views/HelpView'
@@ -9,9 +10,13 @@ import { useAutoSave } from '@/hooks/useAutoSave'
 import { Button } from '@/components/ui/button'
 import { Save, Check, AlertCircle } from 'lucide-react'
 
-type ViewType = 'designer' | 'projects' | 'settings' | 'help'
+type ViewType = 'welcome' | 'designer' | 'projects' | 'settings' | 'help'
 
 const viewConfig: Record<ViewType, { title: string; subtitle: string }> = {
+  welcome: {
+    title: 'Welcome',
+    subtitle: 'Get started with GeoFlow SDI Designer',
+  },
   designer: {
     title: 'Design Tool',
     subtitle: 'Create and configure your SDI system',
@@ -31,7 +36,7 @@ const viewConfig: Record<ViewType, { title: string; subtitle: string }> = {
 }
 
 function App() {
-  const [currentView, setCurrentView] = useState<ViewType>('designer')
+  const [currentView, setCurrentView] = useState<ViewType>('welcome')
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
 
   const { designInputs, saveToDatabase, loadFromDatabase, isDirty } = useDesignStore()
@@ -65,6 +70,8 @@ function App() {
 
   const renderView = () => {
     switch (currentView) {
+      case 'welcome':
+        return <WelcomeView onGetStarted={() => setCurrentView('designer')} />
       case 'designer':
         return <WizardContainer />
       case 'projects':
@@ -74,7 +81,7 @@ function App() {
       case 'help':
         return <HelpView />
       default:
-        return <WizardContainer />
+        return <WelcomeView onGetStarted={() => setCurrentView('designer')} />
     }
   }
 
