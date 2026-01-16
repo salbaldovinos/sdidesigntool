@@ -1,0 +1,2180 @@
+{
+  "meta": {
+    "source": "Geoflow Sales Quick Reference Guide",
+    "version": "Sept 2023",
+    "lastUpdated": "2023-09-07"
+  },
+  "dripTubing": {
+    "waterflowProClassic": {
+      "name": "WaterflowPRO® Classic Drip Tubing",
+      "description": "Classic drip tubing with cylindrical emitters, Geoshield and Rootguard",
+      "outerDiameter": 16,
+      "outerDiameterUnit": "mm",
+      "emitterType": "cylindrical",
+      "features": ["Geoshield", "Rootguard"],
+      "products": [
+        {
+          "partNumber": "G-WFCL-16-4-24",
+          "previousPartNumber": "WFCL-16-4-24",
+          "description": "Classic drip tubing, 24\" cylindrical emitter spacing, ~1.0 gph, O.D. 16mm",
+          "emitterSpacing": 24,
+          "emitterSpacingUnit": "in",
+          "flowRate": 1.0,
+          "flowRateUnit": "gph",
+          "stock": "In stock",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 20.0,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-WFCL-16-4-12",
+          "previousPartNumber": "WFCL-16-4-12",
+          "description": "Classic drip tubing, 12\" cylindrical emitter spacing, ~1.0 gph, O.D. 16mm",
+          "emitterSpacing": 12,
+          "emitterSpacingUnit": "in",
+          "flowRate": 1.0,
+          "flowRateUnit": "gph",
+          "stock": "On demand",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 22.0,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "waterflowProPC": {
+      "name": "WaterflowPRO® PC Drip Tubing",
+      "description": "Pressure compensating drip tubing with cylindrical emitters, Geoshield and Rootguard",
+      "outerDiameter": 16,
+      "outerDiameterUnit": "mm",
+      "emitterType": "cylindrical",
+      "pressureCompensating": true,
+      "features": ["Geoshield", "Rootguard", "Pressure Compensating"],
+      "products": [
+        {
+          "partNumber": "G-WFPC-16-2-24",
+          "previousPartNumber": "WFPC-16-2-24",
+          "description": "PC drip tubing, 24\" cylindrical emitter spacing, ~0.6 gph, O.D. 16mm",
+          "emitterSpacing": 24,
+          "emitterSpacingUnit": "in",
+          "flowRate": 0.6,
+          "flowRateUnit": "gph",
+          "stock": "In stock",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 20.0,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-WFPC-16-2-12",
+          "previousPartNumber": "WFPC-16-2-12",
+          "description": "PC drip tubing, 12\" cylindrical emitter spacing, ~0.6 gph, O.D. 16mm",
+          "emitterSpacing": 12,
+          "emitterSpacingUnit": "in",
+          "flowRate": 0.6,
+          "flowRateUnit": "gph",
+          "stock": "In stock",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 21.0,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-WFPC-16-4-24",
+          "previousPartNumber": "WFPC-16-4-24",
+          "description": "PC drip tubing, 24\" cylindrical emitter spacing, ~0.9 gph, O.D. 16mm",
+          "emitterSpacing": 24,
+          "emitterSpacingUnit": "in",
+          "flowRate": 0.9,
+          "flowRateUnit": "gph",
+          "stock": "In stock",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 20.0,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-WFPC-16-4-12",
+          "previousPartNumber": "WFPC-16-4-12",
+          "description": "PC drip tubing, 12\" cylindrical emitter spacing, ~0.9 gph, O.D. 16mm",
+          "emitterSpacing": 12,
+          "emitterSpacingUnit": "in",
+          "flowRate": 0.9,
+          "flowRateUnit": "gph",
+          "stock": "In stock",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 21.0,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "waterflowProBlank": {
+      "name": "WaterflowPRO® Blank Tubing",
+      "description": "Blank tubing without emitters, with GeoShield",
+      "outerDiameter": 16,
+      "outerDiameterUnit": "mm",
+      "features": ["GeoShield"],
+      "products": [
+        {
+          "partNumber": "G-WF-PLAIN",
+          "previousPartNumber": "WFPLAIN",
+          "description": "Blank tubing, O.D. 16mm, GeoShield, 100ft",
+          "stock": "In stock",
+          "moq": 100,
+          "moqUnit": "ft",
+          "weight": 4.0,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "waterflowEcoPC": {
+      "name": "WaterflowECO® PC Drip Tubing",
+      "description": "Eco-friendly pressure compensating drip tubing with flat emitters",
+      "outerDiameter": 17,
+      "outerDiameterUnit": "mm",
+      "emitterType": "flat",
+      "pressureCompensating": true,
+      "features": ["Geoshield", "Pressure Compensating"],
+      "products": [
+        {
+          "partNumber": "G-WFPC-17-1.6-24-ECO",
+          "description": "Drip tubing PC 24\" flat emitter spacing, ~0.4 gph, O.D. 17mm, Geoshield",
+          "emitterSpacing": 24,
+          "emitterSpacingUnit": "in",
+          "flowRate": 0.4,
+          "flowRateUnit": "gph",
+          "stock": "On demand",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 20.0,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-WFPC-17-2-24-ECO",
+          "description": "Drip tubing PC 24\" flat emitter spacing, ~0.6 gph, O.D. 17mm, Geoshield",
+          "emitterSpacing": 24,
+          "emitterSpacingUnit": "in",
+          "flowRate": 0.6,
+          "flowRateUnit": "gph",
+          "stock": "In stock",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 20.0,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-WFPC-17-4-24-ECO",
+          "description": "Drip tubing PC 24\" flat emitter spacing, ~1.0 gph, O.D. 17mm, Geoshield",
+          "emitterSpacing": 24,
+          "emitterSpacingUnit": "in",
+          "flowRate": 1.0,
+          "flowRateUnit": "gph",
+          "stock": "On demand",
+          "moq": 500,
+          "moqUnit": "ft",
+          "weight": 20.0,
+          "weightUnit": "lbs"
+        }
+      ]
+    }
+  },
+  "headworks": {
+    "dripFilterEcoVortex": {
+      "name": "DripFilterECO® Vortex Filter Headworks",
+      "description": "Residential headworks with Vortex filters",
+      "categories": {
+        "preAssembledWithBox": {
+          "name": "Pre-assembled with Guts and Box",
+          "status": "Discontinued",
+          "products": [
+            {
+              "partNumber": "G-WHWS-V1FA",
+              "previousPartNumber": "WHWS-V-1F-A",
+              "description": "Guts and box - 1\" Vortex Filter, Up to 10 gpm, auto",
+              "filterSize": 1,
+              "filterSizeUnit": "in",
+              "maxFlow": 10,
+              "maxFlowUnit": "gpm",
+              "flushType": "auto",
+              "stock": "Discontinued",
+              "weight": 36,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWS-V1FM",
+              "previousPartNumber": "WHWS-V-1F-M",
+              "description": "Guts and box - 1\" Vortex Filter, Up to 10 gpm, manual",
+              "filterSize": 1,
+              "filterSizeUnit": "in",
+              "maxFlow": 10,
+              "maxFlowUnit": "gpm",
+              "flushType": "manual",
+              "stock": "Discontinued",
+              "weight": 36,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWS-V15FA",
+              "previousPartNumber": "WHWS-V-1.5F-A",
+              "description": "Guts and box - 1.5\" Vortex Filter, Up to 20 gpm, auto",
+              "filterSize": 1.5,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "auto",
+              "stock": "Discontinued",
+              "weight": 47,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWS-V15FM",
+              "previousPartNumber": "WHWS-V-1.5F-M",
+              "description": "Guts and box - 1.5\" Vortex Filter, Up to 20 gpm, manual",
+              "filterSize": 1.5,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "manual",
+              "stock": "Discontinued",
+              "weight": 43,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWS-V2FA",
+              "previousPartNumber": "WHWS-V-2F-A",
+              "description": "Guts and box - 2\" Vortex Filter, Up to 45 gpm, auto",
+              "filterSize": 2,
+              "filterSizeUnit": "in",
+              "maxFlow": 45,
+              "maxFlowUnit": "gpm",
+              "flushType": "auto",
+              "stock": "Discontinued",
+              "weight": 47,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWS-V2FM",
+              "previousPartNumber": "WHWS-V-2F-M",
+              "description": "Guts and box - 2\" Vortex Filter, Up to 45 gpm, manual",
+              "filterSize": 2,
+              "filterSizeUnit": "in",
+              "maxFlow": 45,
+              "maxFlowUnit": "gpm",
+              "flushType": "manual",
+              "stock": "Discontinued",
+              "weight": 43,
+              "weightUnit": "lbs"
+            }
+          ]
+        },
+        "gutsOnly": {
+          "name": "Guts Only Vortex Filter",
+          "products": [
+            {
+              "partNumber": "G-WHWSGUT-V1FA",
+              "previousPartNumber": "WHWS-GUT-V-1F-A",
+              "description": "DripFilterECO - 1\" Vortex Filter, Up to 10gpm, Automatic flush",
+              "filterSize": 1,
+              "filterSizeUnit": "in",
+              "maxFlow": 10,
+              "maxFlowUnit": "gpm",
+              "flushType": "auto",
+              "stock": "On demand",
+              "weight": 8,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWSGUT-V1FM",
+              "previousPartNumber": "WHWS-GUT-V-1F-M",
+              "description": "DripFilterECO - 1\" Vortex Filter, Up to 10gpm, Manual flush",
+              "filterSize": 1,
+              "filterSizeUnit": "in",
+              "maxFlow": 10,
+              "maxFlowUnit": "gpm",
+              "flushType": "manual",
+              "stock": "On demand",
+              "weight": 7,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWSGUT-V15FA",
+              "previousPartNumber": "WHWS-GUT-V-15F-A",
+              "description": "DripFilterECO - 1.5\" Vortex Filter, Up to 20gpm, Automatic flush",
+              "filterSize": 1.5,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "auto",
+              "stock": "On demand",
+              "weight": 16,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWSGUT-V15FM",
+              "previousPartNumber": "WHWS-GUT-V-15F-M",
+              "description": "DripFilterECO - 1.5\" Vortex Filter, Up to 20gpm, Manual flush",
+              "filterSize": 1.5,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "manual",
+              "stock": "On demand",
+              "weight": 12,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWSGUT-V2FA",
+              "previousPartNumber": "WHWS-GUT-V-2F-A",
+              "description": "DripFilterECO - 2\" Vortex Filter, Up to 20gpm, Automatic flush",
+              "filterSize": 2,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "auto",
+              "stock": "On demand",
+              "weight": 16,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWSGUT-V2FM",
+              "previousPartNumber": "WHWS-GUT-V-2F-M",
+              "description": "DripFilterECO - 2\" Vortex Filter, Up to 20gpm, Manual flush",
+              "filterSize": 2,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "manual",
+              "stock": "On demand",
+              "weight": 12,
+              "weightUnit": "lbs"
+            }
+          ]
+        }
+      }
+    },
+    "dripFilterEcoBioDisc": {
+      "name": "DripFilterECO® BioDisc Headworks",
+      "description": "Residential headworks with BioDisc filters",
+      "categories": {
+        "preAssembledHDPE": {
+          "name": "Pre-assembled in HDPE Basin",
+          "products": [
+            {
+              "partNumber": "G-DFE-RBB2618-AW-150BD-1-100SV-1",
+              "previousPartNumber": "Q-PDS-MS-1.5-DF-AUT",
+              "description": "DripFilterECO headworks in 26x18 HDPE basin with lid, auto washdown, 1.5\" BioDisc filter, Up to 20 gpm, 1\" auto",
+              "filterSize": 1.5,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "auto",
+              "stock": "In Stock"
+            },
+            {
+              "partNumber": "G-DFE-RBB2618-MW-150BD-1-100MV-1",
+              "previousPartNumber": "Q-PDS-MS-1.5-DF-MAN",
+              "description": "DripFilterECO headworks in 26x18 HDPE basin with lid, manual washdown, 1.5\" BioDisc filter, Up to 20 gpm, 1\" manual",
+              "filterSize": 1.5,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "manual",
+              "stock": "In Stock"
+            }
+          ]
+        },
+        "gutsOnly": {
+          "name": "Guts Only BioDisc",
+          "products": [
+            {
+              "partNumber": "G-WHWSGUT-D-15FA",
+              "previousPartNumber": "WHWS-GUT-D-15F-A",
+              "description": "DripFilterECO guts only - 1.5\" BioDisc Filter, Up to 20 gpm, 1\" auto",
+              "filterSize": 1.5,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "auto",
+              "stock": "In stock",
+              "weight": 8,
+              "weightUnit": "lbs"
+            },
+            {
+              "partNumber": "G-WHWSGUT-D-15FM",
+              "previousPartNumber": "WHWS-GUT-D-15F-M",
+              "description": "DripFilterECO guts only - 1.5\" BioDisc Filter, Up to 20 gpm, 1\" manual",
+              "filterSize": 1.5,
+              "filterSizeUnit": "in",
+              "maxFlow": 20,
+              "maxFlowUnit": "gpm",
+              "flushType": "manual",
+              "stock": "In stock",
+              "weight": 8,
+              "weightUnit": "lbs"
+            }
+          ]
+        }
+      }
+    },
+    "dripFilterPro": {
+      "name": "DripFilterPRO® Commercial Headworks",
+      "description": "Commercial auto washdown headworks with Jumbo filters",
+      "products": [
+        {
+          "partNumber": "G-DFP-AW-200BD-1",
+          "description": "Geoflow DripFilterPRO Headworks, auto washdown, Up to 50 gpm: One Biodisc 2\" filter rack (3 filters total) with Geoshield + 3 Replacement filter cartridges",
+          "maxFlow": 50,
+          "maxFlowUnit": "gpm",
+          "filterCount": 3,
+          "filterSize": 2,
+          "filterSizeUnit": "in",
+          "stock": "On demand"
+        },
+        {
+          "partNumber": "G-DFP-AW-200BD-2",
+          "description": "Geoflow DripFilterPRO Headworks, auto washdown, Up to 100 gpm: Two Biodisc 2\" filter rack (6 filters total) with Geoshield + 6 Replacement filter cartridges",
+          "maxFlow": 100,
+          "maxFlowUnit": "gpm",
+          "filterCount": 6,
+          "filterSize": 2,
+          "filterSizeUnit": "in",
+          "stock": "On demand"
+        }
+      ]
+    },
+    "boxes": {
+      "name": "Headworks Boxes",
+      "products": [
+        {
+          "partNumber": "G-WHWSBOX-S",
+          "previousPartNumber": "WHWS-BOX-S",
+          "description": "13\"x24\"x15\" headworks box drilled for 3/4\" and 1\" guts",
+          "dimensions": "13x24x15",
+          "dimensionUnit": "in",
+          "compatibleSizes": ["0.75", "1"],
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-WHWSBOX-L",
+          "previousPartNumber": "WHWS-BOX-L",
+          "description": "17\"x30\"x15\" headworks box drilled for 1.5\" and 2\" guts",
+          "dimensions": "17x30x15",
+          "dimensionUnit": "in",
+          "compatibleSizes": ["1.5", "2"],
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-WHWSBOX-L-18",
+          "previousPartNumber": "WHWS-BOX-L18",
+          "description": "17\"x30\"x18\" headworks box for 2x1.5\" BioDisc guts",
+          "dimensions": "17x30x18",
+          "dimensionUnit": "in",
+          "stock": "On demand"
+        }
+      ]
+    }
+  },
+  "zoneBoxes": {
+    "name": "Zone Boxes",
+    "description": "Pre-assembled zone valve assemblies",
+    "products": [
+      {
+        "partNumber": "G-WHZONE-100-2",
+        "previousPartNumber": "WHZONE-100-2",
+        "description": "2 Zone Assembly, 1\" solenoids, 13x24x15, 5 to 25 gpm",
+        "zones": 2,
+        "solenoidSize": 1,
+        "solenoidSizeUnit": "in",
+        "dimensions": "13x24x15",
+        "minFlow": 5,
+        "maxFlow": 25,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-WHZONE-100-3",
+        "previousPartNumber": "WHZONE-100-3",
+        "description": "3 Zone Assembly, 1\" solenoids, 13x24x15, 5 to 25 gpm",
+        "zones": 3,
+        "solenoidSize": 1,
+        "solenoidSizeUnit": "in",
+        "dimensions": "13x24x15",
+        "minFlow": 5,
+        "maxFlow": 25,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-WHZONE-100-4",
+        "previousPartNumber": "WHZONE-100-4",
+        "description": "4 Zone Assembly, 1\" solenoids, 13x24x15, 5 to 25 gpm",
+        "zones": 4,
+        "solenoidSize": 1,
+        "solenoidSizeUnit": "in",
+        "dimensions": "13x24x15",
+        "minFlow": 5,
+        "maxFlow": 25,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-WHZONE-150-2",
+        "previousPartNumber": "WHZONE-150-2",
+        "description": "2 Zone Assembly, 1.5\" solenoids, 17x30x15, 25 to 90 gpm",
+        "zones": 2,
+        "solenoidSize": 1.5,
+        "solenoidSizeUnit": "in",
+        "dimensions": "17x30x15",
+        "minFlow": 25,
+        "maxFlow": 90,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-WHZONE-150-3",
+        "previousPartNumber": "WHZONE-150-3",
+        "description": "3 Zone Assembly, 1.5\" solenoids, 17x30x15, 25 to 90 gpm",
+        "zones": 3,
+        "solenoidSize": 1.5,
+        "solenoidSizeUnit": "in",
+        "dimensions": "17x30x15",
+        "minFlow": 25,
+        "maxFlow": 90,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-WHZONE-150-4",
+        "previousPartNumber": "WHZONE-150-4",
+        "description": "4 Zone Assembly, 1.5\" solenoids, 17x30x15, 25 to 90 gpm",
+        "zones": 4,
+        "solenoidSize": 1.5,
+        "solenoidSizeUnit": "in",
+        "dimensions": "17x30x15",
+        "minFlow": 25,
+        "maxFlow": 90,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-WHZONE-200-2",
+        "previousPartNumber": "WHZONE-200-2",
+        "description": "2 Zone Assembly, 2\" solenoids, 17x30x15, 25 to 90 gpm",
+        "zones": 2,
+        "solenoidSize": 2,
+        "solenoidSizeUnit": "in",
+        "dimensions": "17x30x15",
+        "minFlow": 25,
+        "maxFlow": 90,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-WHZONE-200-3",
+        "previousPartNumber": "WHZONE-200-3",
+        "description": "3 Zone Assembly, 2\" solenoids, 17x30x15, 25 to 90 gpm",
+        "zones": 3,
+        "solenoidSize": 2,
+        "solenoidSizeUnit": "in",
+        "dimensions": "17x30x15",
+        "minFlow": 25,
+        "maxFlow": 90,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-WHZONE-200-4",
+        "previousPartNumber": "WHZONE-200-4",
+        "description": "4 Zone Assembly, 2\" solenoids, 17x30x15, 25 to 90 gpm",
+        "zones": 4,
+        "solenoidSize": 2,
+        "solenoidSizeUnit": "in",
+        "dimensions": "17x30x15",
+        "minFlow": 25,
+        "maxFlow": 90,
+        "flowUnit": "gpm",
+        "stock": "On demand",
+        "weight": 46,
+        "weightUnit": "lbs"
+      }
+    ]
+  },
+  "controlPanels": {
+    "standard": {
+      "name": "Standard PLC Control Panels",
+      "description": "PLC-based control panels for SDI systems",
+      "products": [
+        {
+          "partNumber": "G-GEO1-SIM-AUT-B",
+          "description": "1 zone, 115/230VAC, simplex, 1P, 2HP max, auto filter/field",
+          "zones": 1,
+          "voltage": "115/230VAC",
+          "pumpConfig": "simplex",
+          "phase": 1,
+          "maxHP": 2,
+          "flushType": "auto",
+          "stock": "In Stock",
+          "weight": 18,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-GEO1-SIM-MAN-B",
+          "description": "1 zone, 115/230VAC, simplex, 1P, 2HP max, manual filter/field",
+          "zones": 1,
+          "voltage": "115/230VAC",
+          "pumpConfig": "simplex",
+          "phase": 1,
+          "maxHP": 2,
+          "flushType": "manual",
+          "stock": "In Stock",
+          "weight": 16,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-GEO1-DUP-AUT-B",
+          "description": "1 zone, 115/230VAC, duplex, 1P, 2HP max, auto filter/field",
+          "zones": 1,
+          "voltage": "115/230VAC",
+          "pumpConfig": "duplex",
+          "phase": 1,
+          "maxHP": 2,
+          "flushType": "auto",
+          "stock": "In Stock",
+          "weight": 18,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-GEO1-DUP-MAN-B",
+          "description": "1 zone, 115/230VAC, duplex, 1P, 2HP max, manual filter/field",
+          "zones": 1,
+          "voltage": "115/230VAC",
+          "pumpConfig": "duplex",
+          "phase": 1,
+          "maxHP": 2,
+          "flushType": "manual",
+          "stock": "In Stock",
+          "weight": 18,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-GEO4-SIM-AUT-B",
+          "description": "1 to 4 zone individual run time, 115/230VAC, simplex, 1P, 2HP max, auto filter/field",
+          "zones": 4,
+          "minZones": 1,
+          "voltage": "115/230VAC",
+          "pumpConfig": "simplex",
+          "phase": 1,
+          "maxHP": 2,
+          "flushType": "auto",
+          "individualRunTime": true,
+          "stock": "In Stock",
+          "weight": 18,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-GEO4-DUP-AUT-B",
+          "description": "1 to 4 zone individual run time, 115/230VAC, duplex, 1P, 2HP max, auto filter/field",
+          "zones": 4,
+          "minZones": 1,
+          "voltage": "115/230VAC",
+          "pumpConfig": "duplex",
+          "phase": 1,
+          "maxHP": 2,
+          "flushType": "auto",
+          "individualRunTime": true,
+          "stock": "In Stock",
+          "weight": 23,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-GEO8-SIM-AUT-B",
+          "description": "1 to 8 zone individual run time, 115/230VAC, simplex, 1P, 2HP max, auto filter/field",
+          "zones": 8,
+          "minZones": 1,
+          "voltage": "115/230VAC",
+          "pumpConfig": "simplex",
+          "phase": 1,
+          "maxHP": 2,
+          "flushType": "auto",
+          "individualRunTime": true,
+          "stock": "In Stock",
+          "weight": 30,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-GEO8-DUP-AUT-B",
+          "description": "1 to 8 zone individual run time, 115/230VAC, duplex, 1P, 2HP max, auto filter/field",
+          "zones": 8,
+          "minZones": 1,
+          "voltage": "115/230VAC",
+          "pumpConfig": "duplex",
+          "phase": 1,
+          "maxHP": 2,
+          "flushType": "auto",
+          "individualRunTime": true,
+          "stock": "In Stock",
+          "weight": 30,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-GEO12-DUP-AUT",
+          "description": "12 zone individual run time, 115/230VAC, duplex, 1P, 1HP to 2HP max, auto",
+          "zones": 12,
+          "voltage": "115/230VAC",
+          "pumpConfig": "duplex",
+          "phase": 1,
+          "minHP": 1,
+          "maxHP": 2,
+          "flushType": "auto",
+          "individualRunTime": true,
+          "stock": "On demand"
+        }
+      ]
+    }
+  },
+  "flowMeters": {
+    "multiJet": {
+      "name": "Totalizer Flow Meter - MultiJet",
+      "description": "Plastic body MultiJet flow meters with totalizer",
+      "products": [
+        {
+          "partNumber": "G-FM-MJP075",
+          "previousPartNumber": "FM MJP075",
+          "description": "0.75\" MultiJet Flow Meter Plastic body, Totalizer 0.25-20 gpm/150 psi/+-1.5%",
+          "size": 0.75,
+          "sizeUnit": "in",
+          "minFlow": 0.25,
+          "maxFlow": 20,
+          "flowUnit": "gpm",
+          "maxPressure": 150,
+          "pressureUnit": "psi",
+          "accuracy": 1.5,
+          "accuracyUnit": "%",
+          "stock": "In Stock",
+          "weight": 2,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-FM-MJP100",
+          "previousPartNumber": "FM MJP100",
+          "description": "1\" MultiJet Flow Meter Plastic body, Totalizer 0.75-50 gpm/150 psi/+-1.5%",
+          "size": 1,
+          "sizeUnit": "in",
+          "minFlow": 0.75,
+          "maxFlow": 50,
+          "flowUnit": "gpm",
+          "maxPressure": 150,
+          "pressureUnit": "psi",
+          "accuracy": 1.5,
+          "accuracyUnit": "%",
+          "stock": "In Stock",
+          "weight": 3,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-FM-MJP150",
+          "previousPartNumber": "FM MJP150",
+          "description": "1.5\" MultiJet Flow Meter Plastic body, Totalizer 1.5-100 gpm/150 psi/+-1.5%",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "minFlow": 1.5,
+          "maxFlow": 100,
+          "flowUnit": "gpm",
+          "maxPressure": 150,
+          "pressureUnit": "psi",
+          "accuracy": 1.5,
+          "accuracyUnit": "%",
+          "stock": "In Stock",
+          "weight": 5,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "digital": {
+      "name": "Digital Flow Meters",
+      "description": "Digital flow meters with local display",
+      "products": [
+        {
+          "partNumber": "G-FM-DDS-050",
+          "previousPartNumber": "FM-DDS-050",
+          "description": "1/2\" FPT Digital Flow Meter with Local Display, 1.2-10gpm",
+          "size": 0.5,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "minFlow": 1.2,
+          "maxFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 0.9,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-FM-DDS-075",
+          "previousPartNumber": "FM-DDS-075",
+          "description": "3/4\" FPT Digital Flow Meter with Local Display, 2-20gpm",
+          "size": 0.75,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "minFlow": 2,
+          "maxFlow": 20,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 0.9,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-FM-DDS-100",
+          "previousPartNumber": "FM-DDS-100",
+          "description": "1\" FPT Digital Flow Meter with Local Display, 5-50gpm",
+          "size": 1,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "minFlow": 5,
+          "maxFlow": 50,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-FM-DDS-150",
+          "previousPartNumber": "FM-DDS-150",
+          "description": "1.5\" FPT Digital Flow Meter with Local Display, 10-100gpm",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "minFlow": 10,
+          "maxFlow": 100,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-FM-DDS-200",
+          "previousPartNumber": "FM-DDS-200",
+          "description": "2\" FPT Digital Flow Meter with Local Display, 20-200gpm",
+          "size": 2,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "minFlow": 20,
+          "maxFlow": 200,
+          "flowUnit": "gpm",
+          "stock": "On demand",
+          "weight": 1.7,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "electromagnetic": {
+      "name": "Electromagnetic Commercial Flow Meters",
+      "description": "Flanged mag meters with pulse output",
+      "products": [
+        {
+          "partNumber": "G-FMMAGM100",
+          "previousPartNumber": "FM-MAGM-100",
+          "description": "1\" flanged mag meter with pulse output, 2.3 to 110 gpm",
+          "size": 1,
+          "sizeUnit": "in",
+          "connectionType": "flanged",
+          "minFlow": 2.3,
+          "maxFlow": 110,
+          "flowUnit": "gpm",
+          "outputType": "pulse",
+          "stock": "On demand",
+          "weight": 0.9,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-FMMAGM200",
+          "previousPartNumber": "FM-MAGM-200",
+          "description": "2\" flanged mag meter with pulse output, 6 to 300 gpm",
+          "size": 2,
+          "sizeUnit": "in",
+          "connectionType": "flanged",
+          "minFlow": 6,
+          "maxFlow": 300,
+          "flowUnit": "gpm",
+          "outputType": "pulse",
+          "stock": "On demand",
+          "weight": 0.9,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-FMMAGM300",
+          "previousPartNumber": "FM-MAGM-300",
+          "description": "3\" flanged mag meter with pulse output, 14 to 670 gpm",
+          "size": 3,
+          "sizeUnit": "in",
+          "connectionType": "flanged",
+          "minFlow": 14,
+          "maxFlow": 670,
+          "flowUnit": "gpm",
+          "outputType": "pulse",
+          "stock": "On demand",
+          "weight": 1,
+          "weightUnit": "lbs"
+        }
+      ]
+    }
+  },
+  "filters": {
+    "bioDisc": {
+      "name": "BioDisc Filters",
+      "description": "BioDisc filters with Geoshield",
+      "products": [
+        {
+          "partNumber": "G-APBIODISC-150",
+          "previousPartNumber": "APBIODISC-150",
+          "description": "1.5\" BioDisc filter with Geoshield",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "features": ["Geoshield"],
+          "stock": "In Stock",
+          "weight": 3,
+          "weightUnit": "lbs"
+        }
+      ],
+      "replacementParts": [
+        {
+          "partNumber": "G-APBIODISCART-150",
+          "previousPartNumber": "APBIODISCART-150",
+          "description": "1.5\" BioDisc cartridge with Geoshield",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "stock": "In Stock",
+          "weight": 1,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-APBIODISCART-200A",
+          "previousPartNumber": "APBIODISCART-200-A",
+          "description": "2\" BioDisc cartridge with Geoshield, auto",
+          "size": 2,
+          "sizeUnit": "in",
+          "flushType": "auto",
+          "stock": "In Stock",
+          "weight": 7,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-APBIODISCART-200M",
+          "previousPartNumber": "APBIODISCART-200-M",
+          "description": "2\" BioDisc cartridge with Geoshield, manual",
+          "size": 2,
+          "sizeUnit": "in",
+          "flushType": "manual",
+          "stock": "In Stock"
+        },
+        {
+          "partNumber": "G-APBIODISC-150-OR",
+          "previousPartNumber": "APBIODISC-150-OR",
+          "description": "O-ring for 1.5\" BioDisc filter body",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "stock": "In Stock",
+          "weight": 0.1,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-APBIODISC-200-OR",
+          "previousPartNumber": "APBIODISC-200-OR02",
+          "description": "O-ring for 2\" BioDisc filter body",
+          "size": 2,
+          "sizeUnit": "in",
+          "stock": "In Stock",
+          "weight": 0.1,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-AP-WRENCH",
+          "description": "1.5\" BioDisc filter wrench",
+          "stock": "In Stock",
+          "weight": 0.5,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "vortex": {
+      "name": "Vortex Filters",
+      "description": "MPT Vortex filters with schrader valve",
+      "products": [
+        {
+          "partNumber": "G-AP4E-1F",
+          "previousPartNumber": "AP4E-1F",
+          "description": "1\" MPT Vortex Filter, 6\" body, 10 gpm max, drilled and tapped with schrader",
+          "size": 1,
+          "sizeUnit": "in",
+          "connectionType": "MPT",
+          "bodyLength": 6,
+          "bodyLengthUnit": "in",
+          "maxFlow": 10,
+          "maxFlowUnit": "gpm",
+          "stock": "To Be Discontinued",
+          "weight": 0.8,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-AP4E-1.5F-3H",
+          "previousPartNumber": "AP4E-1.5F",
+          "description": "1.5\" MPT Filter (3) hole, 20 gpm max drilled and tapped with schrader",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "connectionType": "MPT",
+          "holes": 3,
+          "maxFlow": 20,
+          "maxFlowUnit": "gpm",
+          "stock": "To Be Discontinued",
+          "weight": 6,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "simTechPressure": {
+      "name": "Sim/Tech Pressure Filters",
+      "description": "Pressure filters for effluent screening",
+      "products": [
+        {
+          "partNumber": "STF-100",
+          "description": "pressure filter job ready 2\", stainless steel screen, 1/16\" holes",
+          "size": 2,
+          "sizeUnit": "in",
+          "screenMaterial": "stainless steel",
+          "holeSize": 0.0625,
+          "holeSizeUnit": "in",
+          "stock": "In Stock",
+          "weight": 2,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "STF-100A2",
+          "description": "pressure filter field assemble 2\", stainless steel screen, 1/16\" holes",
+          "size": 2,
+          "sizeUnit": "in",
+          "screenMaterial": "stainless steel",
+          "holeSize": 0.0625,
+          "holeSizeUnit": "in",
+          "assemblyType": "field",
+          "stock": "In Stock",
+          "weight": 2,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "STF-100A3",
+          "description": "pressure filter custom model 3\", stainless steel screen, 1/16\" holes",
+          "size": 3,
+          "sizeUnit": "in",
+          "screenMaterial": "stainless steel",
+          "holeSize": 0.0625,
+          "holeSizeUnit": "in",
+          "stock": "In Stock",
+          "weight": 2,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "STF-100A4",
+          "description": "pressure filter custom model 4\", stainless steel screen, 1/16\" holes",
+          "size": 4,
+          "sizeUnit": "in",
+          "screenMaterial": "stainless steel",
+          "holeSize": 0.0625,
+          "holeSizeUnit": "in",
+          "stock": "In Stock",
+          "weight": 1,
+          "weightUnit": "lbs"
+        }
+      ]
+    }
+  },
+  "valves": {
+    "solenoid": {
+      "name": "Solenoid Valves",
+      "description": "24VAC solenoid valves",
+      "products": [
+        {
+          "partNumber": "G-SVLVB-075",
+          "description": "3/4\" NPT Solenoid Valve 24V, normally closed flow ctr stem, man override",
+          "size": 0.75,
+          "sizeUnit": "in",
+          "connectionType": "NPT",
+          "voltage": "24V",
+          "normalState": "closed",
+          "stock": "On demand"
+        },
+        {
+          "partNumber": "G-SVLVB-100X",
+          "previousPartNumber": "SVLVB-100X",
+          "description": "1\" Solenoid valve, 24VAC, FPT, NC, External plumbing",
+          "size": 1,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "voltage": "24VAC",
+          "normalState": "closed",
+          "plumbing": "external",
+          "stock": "In Stock",
+          "weight": 1,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-SVLVB-150X",
+          "previousPartNumber": "SVLVB-150X",
+          "description": "1.5\" Solenoid valve, 24VAC, FPT, NC, External plumbing",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "voltage": "24VAC",
+          "normalState": "closed",
+          "plumbing": "external",
+          "stock": "In Stock",
+          "weight": 2.6,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-SVLVB-200",
+          "previousPartNumber": "SVLVB-200",
+          "description": "2\" Solenoid valve. 24VAC, FPT, NC, External Plumbing",
+          "size": 2,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "voltage": "24VAC",
+          "normalState": "closed",
+          "plumbing": "external",
+          "stock": "In Stock",
+          "weight": 3.4,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-SVLVB-300",
+          "previousPartNumber": "SVLVB-300",
+          "description": "3\" Solenoid valve. 24VAC, FPT, NC, External Plumbing",
+          "size": 3,
+          "sizeUnit": "in",
+          "connectionType": "FPT",
+          "voltage": "24VAC",
+          "normalState": "closed",
+          "plumbing": "external",
+          "stock": "On demand",
+          "weight": 4.4,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "actuated": {
+      "name": "Actuated Valves",
+      "description": "Motorized ball valves",
+      "products": [
+        {
+          "partNumber": "G-BVLVACT-100SS",
+          "previousPartNumber": "BVLVACT-10SS",
+          "description": "1\" Ball Valve - SS, 9-24V AC/DC-2 wire, nc. autospring return",
+          "size": 1,
+          "sizeUnit": "in",
+          "material": "stainless steel",
+          "voltage": "9-24V AC/DC",
+          "wires": 2,
+          "normalState": "closed",
+          "returnType": "autospring",
+          "stock": "In Stock",
+          "weight": 3,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "hydrotek": {
+      "name": "Hydrotek Valves",
+      "description": "Indexing distribution valves for zone sequencing",
+      "products": [
+        {
+          "partNumber": "G-HT-4402",
+          "previousPartNumber": "HT-4402",
+          "description": "2 zone Hydrotek valve 1.25\" x 1.25\", 25-75psi, min10gpm",
+          "zones": 2,
+          "inletSize": 1.25,
+          "outletSize": 1.25,
+          "sizeUnit": "in",
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-HT-4403",
+          "previousPartNumber": "HT-4403",
+          "description": "3 zone Hydrotek valve 1.25\" x 1.25\", 25-75psi, min10gpm",
+          "zones": 3,
+          "inletSize": 1.25,
+          "outletSize": 1.25,
+          "sizeUnit": "in",
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-HT-4404",
+          "previousPartNumber": "HT-4404",
+          "description": "4 zone Hydrotek valve 1.25\" x 1.25\", 25-75psi, min10gpm",
+          "zones": 4,
+          "inletSize": 1.25,
+          "outletSize": 1.25,
+          "sizeUnit": "in",
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-HT-4602",
+          "previousPartNumber": "HT-4602",
+          "description": "2 zone Hydrotek valve 1.25\" x 1\", 25-75psi, min10gpm",
+          "zones": 2,
+          "inletSize": 1.25,
+          "outletSize": 1,
+          "sizeUnit": "in",
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-HT-4603",
+          "previousPartNumber": "HT-4603",
+          "description": "3 zone Hydrotek valve 1.25\" x 1\", 25-75psi, min10gpm",
+          "zones": 3,
+          "inletSize": 1.25,
+          "outletSize": 1,
+          "sizeUnit": "in",
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-HT-4604",
+          "previousPartNumber": "HT-4604",
+          "description": "4 zone Hydrotek valve 1.25\" x 1\", 25-75psi, min10gpm",
+          "zones": 4,
+          "inletSize": 1.25,
+          "outletSize": 1,
+          "sizeUnit": "in",
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-HT-4605",
+          "previousPartNumber": "HT-4605",
+          "description": "5 zone Hydrotek valve 1.25\" x 1\", 25-75psi, min10gpm",
+          "zones": 5,
+          "inletSize": 1.25,
+          "outletSize": 1,
+          "sizeUnit": "in",
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-HT-4606",
+          "previousPartNumber": "HT-4606",
+          "description": "6 zone Hydrotek valve 1.25\" x 1\", 25-75psi, min10gpm",
+          "zones": 6,
+          "inletSize": 1.25,
+          "outletSize": 1,
+          "sizeUnit": "in",
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "flowUnit": "gpm",
+          "stock": "In Stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "diverter": {
+      "name": "Pre-assembled Diverter Valves",
+      "description": "Indexing distribution valve assemblies in HDPE basin",
+      "products": [
+        {
+          "partNumber": "Q-PDS-DV-4-4-2-AP",
+          "description": "Indexing distribution valve assembly, 2 zone, 25-75 psi, 10-40 gpm in D26\"xH18\" basin",
+          "zones": 2,
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "maxFlow": 40,
+          "flowUnit": "gpm",
+          "basinDiameter": 26,
+          "basinHeight": 18,
+          "dimensionUnit": "in",
+          "stock": "In Stock"
+        },
+        {
+          "partNumber": "Q-PDS-DV-4-4-3-AP",
+          "description": "Indexing distribution valve assembly, 3 zone, 25-75 psi, 10-40 gpm in D26\"xH18\" basin",
+          "zones": 3,
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "maxFlow": 40,
+          "flowUnit": "gpm",
+          "basinDiameter": 26,
+          "basinHeight": 18,
+          "dimensionUnit": "in",
+          "stock": "In Stock"
+        },
+        {
+          "partNumber": "Q-PDS-DV-4-4-4-AP",
+          "description": "Indexing distribution valve assembly, 4 zone, 25-75 psi, 10-40 gpm in D26\"xH18\" basin",
+          "zones": 4,
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "maxFlow": 40,
+          "flowUnit": "gpm",
+          "basinDiameter": 26,
+          "basinHeight": 18,
+          "dimensionUnit": "in",
+          "stock": "In Stock"
+        },
+        {
+          "partNumber": "Q-PDS-DV-4-6-5-AP",
+          "description": "Indexing distribution valve assembly, 5 zone, 25-75 psi, 10-30 gpm in D26\"xH18\" basin",
+          "zones": 5,
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "maxFlow": 30,
+          "flowUnit": "gpm",
+          "basinDiameter": 26,
+          "basinHeight": 18,
+          "dimensionUnit": "in",
+          "stock": "In Stock"
+        },
+        {
+          "partNumber": "Q-PDS-DV-4-6-6-AP",
+          "description": "Indexing distribution valve assembly, 6 zone, 25-75 psi, 10-30 gpm in D26\"xH18\" basin",
+          "zones": 6,
+          "minPressure": 25,
+          "maxPressure": 75,
+          "pressureUnit": "psi",
+          "minFlow": 10,
+          "maxFlow": 30,
+          "flowUnit": "gpm",
+          "basinDiameter": 26,
+          "basinHeight": 18,
+          "dimensionUnit": "in",
+          "stock": "In Stock"
+        }
+      ]
+    },
+    "checkBall": {
+      "name": "Ball Check Valves",
+      "description": "True Union ball check valves PVC/Viton",
+      "products": [
+        {
+          "partNumber": "G-CV-B-100",
+          "previousPartNumber": "CV-B-100",
+          "description": "1\" True Union ball check PVC/Viton, Slip and FPT",
+          "size": 1,
+          "sizeUnit": "in",
+          "material": "PVC/Viton",
+          "connectionTypes": ["Slip", "FPT"],
+          "stock": "In Stock",
+          "weight": 1,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-CV-B-150",
+          "previousPartNumber": "CV-B-150",
+          "description": "1.5\" True Union ball check PVC/Viton, Slip and FPT",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "material": "PVC/Viton",
+          "connectionTypes": ["Slip", "FPT"],
+          "stock": "In Stock",
+          "weight": 2.2,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-CV-B-200",
+          "previousPartNumber": "CV-B-200",
+          "description": "2\" True Union ball check PVC/Viton, Slip and FPT",
+          "size": 2,
+          "sizeUnit": "in",
+          "material": "PVC/Viton",
+          "connectionTypes": ["Slip", "FPT"],
+          "stock": "In Stock",
+          "weight": 3,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "checkSpring": {
+      "name": "Spring Check Valves",
+      "description": "Spring check valves requiring 2psi to open",
+      "products": [
+        {
+          "partNumber": "G-CV-S-100",
+          "previousPartNumber": "CV-S-100",
+          "description": "1\" Spring check valve. Slip x Slip. Requires 2psi to open",
+          "size": 1,
+          "sizeUnit": "in",
+          "connectionType": "Slip x Slip",
+          "crackingPressure": 2,
+          "crackingPressureUnit": "psi",
+          "stock": "In Stock",
+          "weight": 0.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-CV-S-150",
+          "previousPartNumber": "CV-S-150",
+          "description": "1.5\" Spring check valve. Slip x Slip. Requires 2psi to open",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "connectionType": "Slip x Slip",
+          "crackingPressure": 2,
+          "crackingPressureUnit": "psi",
+          "stock": "In Stock",
+          "weight": 0.7,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-CV-S-200",
+          "previousPartNumber": "CV-S-200",
+          "description": "2\" Spring check valve. Slip x Slip. Requires 2psi to open",
+          "size": 2,
+          "sizeUnit": "in",
+          "connectionType": "Slip x Slip",
+          "crackingPressure": 2,
+          "crackingPressureUnit": "psi",
+          "stock": "On demand",
+          "weight": 1,
+          "weightUnit": "lbs"
+        }
+      ]
+    }
+  },
+  "pressureRegulators": {
+    "name": "Pressure Regulators",
+    "description": "Preset pressure regulators for various flow ranges",
+    "products": [
+      {
+        "partNumber": "G-PMR20-LF",
+        "previousPartNumber": "PMR20-LF",
+        "description": "20 psi regulator. 1/8-8 gpm 3/4\" FIPT",
+        "pressure": 20,
+        "pressureUnit": "psi",
+        "minFlow": 0.125,
+        "maxFlow": 8,
+        "flowUnit": "gpm",
+        "size": 0.75,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "On demand",
+        "weight": 0.3,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR20-MF",
+        "previousPartNumber": "PMR20-MF",
+        "description": "20 psi regulator. 2-20 gpm 1\" FIPT",
+        "pressure": 20,
+        "pressureUnit": "psi",
+        "minFlow": 2,
+        "maxFlow": 20,
+        "flowUnit": "gpm",
+        "size": 1,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 0.4,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR20-HF",
+        "previousPartNumber": "PMR20-HF",
+        "description": "20 psi regulator. 10-32 gpm 1.25\" FIPT",
+        "pressure": 20,
+        "pressureUnit": "psi",
+        "minFlow": 10,
+        "maxFlow": 32,
+        "flowUnit": "gpm",
+        "size": 1.25,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 0.6,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR20-UF",
+        "previousPartNumber": "PMR20-UF",
+        "description": "20 psi regulator. 20-100 gpm 2\" FIPT",
+        "pressure": 20,
+        "pressureUnit": "psi",
+        "minFlow": 20,
+        "maxFlow": 100,
+        "flowUnit": "gpm",
+        "size": 2,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 2.5,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR30-MF",
+        "previousPartNumber": "PMR30-MF",
+        "description": "30 psi regulator. 2-20 gpm 1\" FIPT",
+        "pressure": 30,
+        "pressureUnit": "psi",
+        "minFlow": 2,
+        "maxFlow": 20,
+        "flowUnit": "gpm",
+        "size": 1,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 0.4,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR30-HF",
+        "previousPartNumber": "PMR30-HF",
+        "description": "30 psi regulator. 10-32 gpm 1.25\" FIPT",
+        "pressure": 30,
+        "pressureUnit": "psi",
+        "minFlow": 10,
+        "maxFlow": 32,
+        "flowUnit": "gpm",
+        "size": 1.25,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 0.6,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR30-UF",
+        "previousPartNumber": "PMR30-UF",
+        "description": "30 psi regulator. 20-100 gpm 2\" FIPT",
+        "pressure": 30,
+        "pressureUnit": "psi",
+        "minFlow": 20,
+        "maxFlow": 100,
+        "flowUnit": "gpm",
+        "size": 2,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 2.5,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR40-MF",
+        "previousPartNumber": "PMR40-MF",
+        "description": "40 psi regulator. 2-20 gpm 1\" FIPT",
+        "pressure": 40,
+        "pressureUnit": "psi",
+        "minFlow": 2,
+        "maxFlow": 20,
+        "flowUnit": "gpm",
+        "size": 1,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 0.4,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR40-HF",
+        "previousPartNumber": "PMR40-HF",
+        "description": "40 psi regulator. 10-32 gpm 1.25\" FIPT",
+        "pressure": 40,
+        "pressureUnit": "psi",
+        "minFlow": 10,
+        "maxFlow": 32,
+        "flowUnit": "gpm",
+        "size": 1.25,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 0.6,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR40-UF",
+        "previousPartNumber": "PMR40-UF",
+        "description": "40 psi regulator. 20-90 gpm 2\" FIPT",
+        "pressure": 40,
+        "pressureUnit": "psi",
+        "minFlow": 20,
+        "maxFlow": 90,
+        "flowUnit": "gpm",
+        "size": 2,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 2.5,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR50-MF",
+        "previousPartNumber": "PMR50-MF",
+        "description": "50 psi regulator. 2-20 gpm 1\" FIPT",
+        "pressure": 50,
+        "pressureUnit": "psi",
+        "minFlow": 2,
+        "maxFlow": 20,
+        "flowUnit": "gpm",
+        "size": 1,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 0.4,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR50-HF",
+        "previousPartNumber": "PMR50-HF",
+        "description": "50 psi regulator. 10-32 gpm 1.25\" FIPT",
+        "pressure": 50,
+        "pressureUnit": "psi",
+        "minFlow": 10,
+        "maxFlow": 32,
+        "flowUnit": "gpm",
+        "size": 1.25,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 0.6,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-PMR50-UF",
+        "previousPartNumber": "PMR50-UF",
+        "description": "50 psi regulator. 20-90 gpm 2\" FIPT",
+        "pressure": 50,
+        "pressureUnit": "psi",
+        "minFlow": 20,
+        "maxFlow": 90,
+        "flowUnit": "gpm",
+        "size": 2,
+        "sizeUnit": "in",
+        "connectionType": "FIPT",
+        "stock": "In Stock",
+        "weight": 2.5,
+        "weightUnit": "lbs"
+      }
+    ]
+  },
+  "airVents": {
+    "name": "Air Vents and Vacuum Breakers",
+    "description": "Air relief valves and vacuum breakers",
+    "products": [
+      {
+        "partNumber": "G-APVBK100M",
+        "description": "1\" MPT Kinetic Vent and Vacuum Relief Valve with mushroom vent",
+        "size": 1,
+        "sizeUnit": "in",
+        "connectionType": "MPT",
+        "ventType": "mushroom",
+        "stock": "In Stock",
+        "weight": 0.3,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-APVBK100L",
+        "description": "1\" MPT Kinetic Vent and Vacuum Relief Valve with 3/8\" BSPT elbow vent",
+        "size": 1,
+        "sizeUnit": "in",
+        "connectionType": "MPT",
+        "ventType": "elbow",
+        "stock": "In Stock",
+        "weight": 0.3,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-ARV-05",
+        "description": "1/2\" Air relief valve",
+        "size": 0.5,
+        "sizeUnit": "in",
+        "stock": "In Stock"
+      },
+      {
+        "partNumber": "G-ARV100",
+        "description": "1\" MPT continuous airvent/vacuum relief valve",
+        "size": 1,
+        "sizeUnit": "in",
+        "connectionType": "MPT",
+        "type": "continuous",
+        "stock": "In Stock",
+        "weight": 2.5,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-ARV200",
+        "description": "2\" MPT continuous airvent/vacuum relief valve",
+        "size": 2,
+        "sizeUnit": "in",
+        "connectionType": "MPT",
+        "type": "continuous",
+        "stock": "On demand",
+        "weight": 2.5,
+        "weightUnit": "lbs"
+      }
+    ],
+    "boxes": [
+      {
+        "partNumber": "G-AVBOX6",
+        "previousPartNumber": "STF-112",
+        "description": "valve box, 7\" round, marked sewer",
+        "shape": "round",
+        "diameter": 7,
+        "diameterUnit": "in",
+        "stock": "In Stock",
+        "weight": 1.5,
+        "weightUnit": "lbs"
+      },
+      {
+        "partNumber": "G-AVBOX10",
+        "previousPartNumber": "STF-113",
+        "description": "valve box, 10\" round, marked sewer",
+        "shape": "round",
+        "diameter": 10,
+        "diameterUnit": "in",
+        "stock": "In Stock",
+        "weight": 2.5,
+        "weightUnit": "lbs"
+      }
+    ]
+  },
+  "fittings": {
+    "lockslip": {
+      "name": "Lockslip Fittings",
+      "description": "Lockslip fittings for WaterflowPRO and WaterflowECO tubing",
+      "forWaterflowPro": [
+        {
+          "partNumber": "G-LTSLIP-600",
+          "previousPartNumber": "LTSLIP-600",
+          "description": "Hose - 1/2\" socket (3/4\" spigot) for Wasteflow PRO (50/bag)",
+          "type": "socket",
+          "size": 0.5,
+          "sizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock",
+          "weight": 1.7,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-LTMPT-600-1/2",
+          "previousPartNumber": "LTMPT-600",
+          "description": "Male Adapter hose - 1/2\"M Thread for Wasteflow PRO (50/bag)",
+          "type": "male adapter",
+          "threadSize": 0.5,
+          "threadSizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-LTMPT-600-3/4",
+          "description": "Male Adapter hose - 3/4\"M Thread for Wasteflow PRO (50/bag)",
+          "type": "male adapter",
+          "threadSize": 0.75,
+          "threadSizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-LTTEE-600",
+          "previousPartNumber": "LTTEE-600",
+          "description": "Hose - Hose Tee coupling for Wasteflow PRO (25/bag)",
+          "type": "tee",
+          "bagQuantity": 25,
+          "stock": "In stock",
+          "weight": 1.5,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-LTEL-600",
+          "previousPartNumber": "LTEL-600",
+          "description": "Swivel Elbow adapter Hose - 3/4\" F Hose for Wasteflow PRO (50/bag)",
+          "type": "elbow",
+          "size": 0.75,
+          "sizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock",
+          "weight": 2.1,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-LTC-600",
+          "previousPartNumber": "LTC-600",
+          "description": "Hose - Hose coupling for Wasteflow PRO (50/bag)",
+          "type": "coupling",
+          "bagQuantity": 50,
+          "stock": "In stock",
+          "weight": 2.3,
+          "weightUnit": "lbs"
+        }
+      ],
+      "forWaterflowEco": [
+        {
+          "partNumber": "G-LTSLIP-700",
+          "description": "Hose - 1/2\" socket (3/4\" spigot) works best with WaterflowECO® (50/bag)",
+          "type": "socket",
+          "size": 0.5,
+          "sizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-LTMPT-700-1/2",
+          "description": "Male Adapter hose - 1/2\"M Thread works best with WaterflowECO® (50/bag)",
+          "type": "male adapter",
+          "threadSize": 0.5,
+          "threadSizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-LTMPT-700-3/4",
+          "description": "Male Adapter hose - 3/4\"M Thread works best with WaterflowECO® (50/bag)",
+          "type": "male adapter",
+          "threadSize": 0.75,
+          "threadSizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-LTTEE-700",
+          "description": "Hose - Hose Tee coupling works best with WaterflowECO® (50/bag)",
+          "type": "tee",
+          "bagQuantity": 25,
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-LTEL-700",
+          "description": "Hose Elbow adapter Hose - 3/4\" F Hose works best with WaterflowECO® (50/bag)",
+          "type": "elbow",
+          "size": 0.75,
+          "sizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock"
+        },
+        {
+          "partNumber": "G-LTC-700",
+          "description": "Hose - Hose coupling works best with WaterflowECO® (50/bag)",
+          "type": "coupling",
+          "bagQuantity": 50,
+          "stock": "In stock"
+        }
+      ],
+      "flexLoopsRisers": [
+        {
+          "partNumber": "G-LTFLEX-R-18-1",
+          "previousPartNumber": "LTFLEXR-18",
+          "description": "18\" flex PVC riser with 1 lockslip adapters. For risers",
+          "type": "riser",
+          "length": 18,
+          "lengthUnit": "in",
+          "adapterCount": 1,
+          "stock": "In stock",
+          "weight": 0.6,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-LTFLEX-L-36",
+          "previousPartNumber": "LTFLEXL-36",
+          "description": "36\" flex PVC w/2 lockslip adapters. For loops or risers",
+          "type": "loop/riser",
+          "length": 36,
+          "lengthUnit": "in",
+          "adapterCount": 2,
+          "stock": "In stock",
+          "weight": 1.2,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-LTFLEX-COIL-100",
+          "previousPartNumber": "LTFLEXCOIL100",
+          "description": "100 ft. flexible PVC Coil. 1/2 in diameter.",
+          "type": "coil",
+          "length": 100,
+          "lengthUnit": "ft",
+          "diameter": 0.5,
+          "diameterUnit": "in",
+          "stock": "In stock",
+          "weight": 21,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "saddleTees": {
+      "name": "Saddle Tees",
+      "description": "PVC saddle tees for manifold connections",
+      "products": [
+        {
+          "partNumber": "G-SADDLET15",
+          "previousPartNumber": "SADDLET15",
+          "description": "1.5\" Black PVC to 1/2\" slip or 3/4\" socket\"",
+          "mainlineSize": 1.5,
+          "mainlineSizeUnit": "in",
+          "color": "Black",
+          "outletSizes": [0.5, 0.75],
+          "outletSizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock",
+          "weight": 4,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-SADDLET20",
+          "previousPartNumber": "SADDLET20",
+          "description": "2\" White PVC to 1/2\" slip or 3/4\" socket\"",
+          "mainlineSize": 2,
+          "mainlineSizeUnit": "in",
+          "color": "White",
+          "outletSizes": [0.5, 0.75],
+          "outletSizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock",
+          "weight": 4,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-SADDLET25",
+          "previousPartNumber": "SADDLET25",
+          "description": "2.5\" Grey PVC to 1/2\" slip or 3/4\" socket\"",
+          "mainlineSize": 2.5,
+          "mainlineSizeUnit": "in",
+          "color": "Grey",
+          "outletSizes": [0.5, 0.75],
+          "outletSizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "In stock",
+          "weight": 4,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-SADDLET30",
+          "previousPartNumber": "SADDLET30",
+          "description": "3\" Brown PVC to 1/2\" slip or 3/4\" socket\"",
+          "mainlineSize": 3,
+          "mainlineSizeUnit": "in",
+          "color": "Brown",
+          "outletSizes": [0.5, 0.75],
+          "outletSizeUnit": "in",
+          "bagQuantity": 50,
+          "stock": "On demand",
+          "weight": 4,
+          "weightUnit": "lbs"
+        }
+      ]
+    }
+  },
+  "accessories": {
+    "pressureGauges": {
+      "name": "Pressure Gauges",
+      "products": [
+        {
+          "partNumber": "G-PG-25-LM",
+          "description": "Pressure gauge 1/4\" NPT. Lower mount",
+          "connectionSize": 0.25,
+          "connectionSizeUnit": "in",
+          "connectionType": "NPT",
+          "mountType": "lower",
+          "stock": "In Stock",
+          "weight": 0.7,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-PG-LEAD-42",
+          "description": "42\" gauge hose with 1/4\" FPT, self clamping air chuck",
+          "length": 42,
+          "lengthUnit": "in",
+          "connectionSize": 0.25,
+          "connectionSizeUnit": "in",
+          "connectionType": "FPT",
+          "stock": "In Stock"
+        }
+      ]
+    },
+    "unions": {
+      "name": "Unions",
+      "products": [
+        {
+          "partNumber": "G-UNION-075-ST",
+          "previousPartNumber": "UNION075ST",
+          "description": "3/4\" Union - FPT x Slip",
+          "size": 0.75,
+          "sizeUnit": "in",
+          "connectionType": "FPT x Slip",
+          "stock": "In stock",
+          "weight": 0.4,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-UNION-100-ST",
+          "previousPartNumber": "UNION100ST",
+          "description": "1\" Union - FPT x Slip",
+          "size": 1,
+          "sizeUnit": "in",
+          "connectionType": "FPT x Slip",
+          "stock": "In stock",
+          "weight": 0.4,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "G-UNION-150-ST",
+          "previousPartNumber": "UNION150ST",
+          "description": "1.5\" Union - FPT x Slip",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "connectionType": "FPT x Slip",
+          "stock": "In stock",
+          "weight": 0.5,
+          "weightUnit": "lbs"
+        }
+      ]
+    },
+    "grommets": {
+      "name": "Grommets",
+      "description": "SCH 40 pipe grommets for tank penetrations",
+      "products": [
+        {
+          "partNumber": "Q-PDS-GT-.50-40",
+          "description": "1/2\" SCH 40 Grommet (250 per box)",
+          "size": 0.5,
+          "sizeUnit": "in",
+          "schedule": 40,
+          "boxQuantity": 250,
+          "stock": "In Stock",
+          "weight": 30,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "Q-PDS-GT-1.00-40",
+          "description": "1\" SCH 40 Grommet (300 per box)",
+          "size": 1,
+          "sizeUnit": "in",
+          "schedule": 40,
+          "boxQuantity": 300,
+          "stock": "In Stock",
+          "weight": 20,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "Q-PDS-GT-1.25-40",
+          "description": "1.25\" SCH 40 Grommet (250 per box)",
+          "size": 1.25,
+          "sizeUnit": "in",
+          "schedule": 40,
+          "boxQuantity": 250,
+          "stock": "In Stock",
+          "weight": 20,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "Q-PDS-GT-1.50-40",
+          "description": "1.5\" SCH 40 Grommet (200 per box)",
+          "size": 1.5,
+          "sizeUnit": "in",
+          "schedule": 40,
+          "boxQuantity": 200,
+          "stock": "In Stock",
+          "weight": 20,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "Q-PDS-GT-2.00-40",
+          "description": "2\" SCH 40 Grommet (125 per box)",
+          "size": 2,
+          "sizeUnit": "in",
+          "schedule": 40,
+          "boxQuantity": 125,
+          "stock": "In Stock",
+          "weight": 15,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "Q-PDS-GT-3.00-40",
+          "description": "3\" SCH 40 Grommet (144 per box)",
+          "size": 3,
+          "sizeUnit": "in",
+          "schedule": 40,
+          "boxQuantity": 144,
+          "stock": "In Stock",
+          "weight": 10,
+          "weightUnit": "lbs"
+        },
+        {
+          "partNumber": "Q-PDS-GT-4.00-40",
+          "description": "4\" SCH 40 Grommet (80 per box)",
+          "size": 4,
+          "sizeUnit": "in",
+          "schedule": 40,
+          "boxQuantity": 80,
+          "stock": "In Stock",
+          "weight": 5,
+          "weightUnit": "lbs"
+        }
+      ]
+    }
+  }
+}
